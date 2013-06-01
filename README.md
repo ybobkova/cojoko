@@ -1,6 +1,6 @@
 # cojoko
 
-Cojoko stands for **Co**mpiling **Jo**ose with **K**nock**o**ut.  
+Cojoko stands for **Co**mpiling **Jo**ose with **K**nock **o**ut.  
 It's an compiled advanced meta object system (Joose) for javascript which supports the generation of view models for [Knockout](http://knockoutjs.com).
 
 ## Introduction
