@@ -1,0 +1,2607 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"usetransl",
+				"use TranslationContainer"
+			],
+			[
+				"trace",
+				"debug_print_backtrace"
+			],
+			[
+				"getEnviron",
+				"getEnvironmentContainer"
+			],
+			[
+				"Navigation",
+				"NavigationNodeRepositoryTest"
+			],
+			[
+				"example",
+				"exampleContexts"
+			],
+			[
+				"File",
+				"use File"
+			],
+			[
+				"addBlack",
+				"addBlackListProperty  (function)"
+			],
+			[
+				"au",
+				"auto_complete_visible"
+			],
+			[
+				"y",
+				"local_yank"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Cojoko.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/in-and-out.md",
+			"settings":
+			{
+				"buffer_size": 1860,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 153,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/Markdown Preview/sample.md",
+			"settings":
+			{
+				"buffer_size": 4048,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/MarkdownPreview.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 496,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/snippets/cojoko/property.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/snippets/markdown/link.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 132,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 30564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/cookbook/grid/grid.json",
+			"settings":
+			{
+				"buffer_size": 532,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"preview",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"previe",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"prev	iew",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"cheats",
+				"Markdown Preview: open Markdown Cheat sheet"
+			],
+			[
+				"pre	view",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"propert	",
+				"Snippet: property"
+			],
+			[
+				"java",
+				"Snippet: markdown-javascript-code"
+			],
+			[
+				"comp",
+				"Snippet: doc-composer-install"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"copy path",
+				"File: Copy Path"
+			],
+			[
+				"create",
+				"Webforge: create test for current class"
+			],
+			[
+				"copyp",
+				"File: Copy Path"
+			],
+			[
+				"reveal",
+				"File: Reveal"
+			],
+			[
+				"COPYPAT",
+				"File: Copy Path"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"php",
+				"PHPUnit: Run These Tests"
+			],
+			[
+				"phpunit",
+				"PHPUnit: Run These Tests"
+			],
+			[
+				"test",
+				"PHPUnit: Run These Tests"
+			],
+			[
+				"file",
+				"File: Move"
+			],
+			[
+				"COPY",
+				"File: Copy Path"
+			],
+			[
+				"create test",
+				"Webforge: create test for current class"
+			],
+			[
+				"cratetest",
+				"Webforge: create test for current class"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"snippet",
+				"Snippet: Class"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"reload",
+				"Schemr: Reload schemes"
+			],
+			[
+				"schemr re",
+				"Schemr: Reload schemes"
+			],
+			[
+				"schemr relo",
+				"Schemr: Reload schemes"
+			],
+			[
+				"schemr rel",
+				"Schemr: Reload schemes"
+			],
+			[
+				"schemr bl",
+				"Schemr: PscBlackPearl"
+			],
+			[
+				"schemr",
+				"Schemr: Pastels on Dark"
+			],
+			[
+				"code",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"Package Control: u",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 231.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/LiveReload.sublime-settings",
+		"/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/snippets/sublime-xml.sublime-snippet",
+		"/D/www/psc-cms/lib/Psc/System/Console/DeployCommand.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/ContentStreamController.php",
+		"/D/www/psc-cms/tests/Psc/CMS/RightContentTest.php",
+		"/D/www/psc-cms/lib/Psc/PSC.php",
+		"/D/www/psc-cms/lib/Psc/Project.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/SortingController.php",
+		"/D/www/psc-cms/lib/Psc/UI/PanelButtons.php",
+		"/D/www/psc-cms/resources/translations/cms.de.php",
+		"/D/www/psc-cms/resources/translations/cms.en.php",
+		"/D/www/psc-cms/lib/Psc/JS/JooseSnippetWidget.php",
+		"/D/www/psc-cms/resources/translations/cms.fr.php",
+		"/D/www/psc-cms/application/tpl/welcome.html",
+		"/D/www/psc-cms/migrate-1.3.xx.md",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/ControllerDependenciesProvider.php",
+		"/D/www/psc-cms/composer.json",
+		"/D/www/psc-cms/lib/Psc/CMS/RightContent.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/Base.php",
+		"/D/www/psc-cms/lib/Psc/CMS/ProjectMain.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Roles/AbstractContainerTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/AbstractContainer.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Project.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/AbstractEntityController.php",
+		"/D/www/psc-cms/lib/Psc/CMS/EntityPropertyMeta.php",
+		"/D/www/psc-cms/lib/Psc/CMS/EntityMeta.php",
+		"/D/www/psc-cms/lib/Psc/CMS/EntityGridPanel.php",
+		"/D/www/psc-cms/lib/Psc/CMS/EntityViewPackage.php",
+		"/D/www/psc-cms/lib/Psc/HTML/Page.php",
+		"/D/www/psc-cms/lib/Psc/HTML/Page5.php",
+		"/D/www/psc-cms/lib/Psc/HTML/FrameworkPage.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/NavigationController.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/PageController.php",
+		"/D/www/psc-cms/lib/Psc/UI/LayoutManager.php",
+		"/D/www/psc-cms/tests/Psc/HTML/PageTest.php",
+		"/D/www/psc-cms/tests/files/fixtures/AddClassPropertyCommandTest/class.PropertyAddInterfaceTestClass.php",
+		"/D/www/psc-cms/www/index.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/SimpleContainerController.php",
+		"/D/www/psc-cms/tests/Psc/CMS/GridPanelTest.php",
+		"/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/use.sublime-completions",
+		"/D/www/psc-cms/tests/Psc/UI/PanelButtonsTest.php",
+		"/D/www/psc-cms/lib/Psc/Data/Accounting/Invoice.php",
+		"/D/www/psc-cms/lib/Psc/Data/Accounting/Price.php",
+		"/D/www/psc-cms/tests/Psc/Data/Accounting/PriceTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Translation/ContainerTest.php",
+		"/D/www/webforge/composer.json",
+		"/D/www/psc-cms/vendor/symfony/translation/Symfony/Component/Translation/Translator.php",
+		"/D/www/psc-cms/vendor/symfony/translation/Symfony/Component/Translation/Loader/PhpFileLoader.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/AbstractEntityControllerFormularTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/EntityFormPanel.php",
+		"/D/www/psc-cms/lib/Psc/UI/FormPanel.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/AbstractEntityControllerTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/ControllerBaseTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/GridPanel.php",
+		"/D/www/psc-cms/tests/Psc/UI/FormPanelTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/NavigationControllerTest.php",
+		"/D/www/psc-cms/tests/Psc/Doctrine/NavigationNodesTestCase.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/Container.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/ContainerController.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/SimpleControllerDependenciesProvider.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/AbstractEntityControllerBaseTest.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/DoublesManager.php",
+		"/D/www/psc-cms/lib/Psc/Test/ArticleSortingController.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Controller/PageControllerTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/EntityFormPanelTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/EntityViewPackageTest.php",
+		"/D/www/psc-cms/tests/Psc/CMS/EntityGridPanelTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/Factory.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Service/EntityService.php",
+		"/D/www/psc-cms/lib/Psc/Test/DatabaseTestCase.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Service/EntityServiceTest.php",
+		"/D/www/psc-cms/tests/Psc/Form/ComponentsValidatorTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Container.php",
+		"/D/www/psc-cms/tests/Psc/CMS/ProjectMainTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Translation/Container.php",
+		"/D/www/psc-cms/tests/Psc/CMS/Translation/LoaderTest.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Translation/Loader.php",
+		"/D/www/psc-cms/lib/Psc/XML/Loader.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/ServiceBase.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/ControllerContainer.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Controller/ContentStreamContainerController.php",
+		"/D/www/psc-cms/lib/Psc/Doctrine/DatabaseTestCase.php",
+		"/D/www/webforge-translation/lib/Webforge/Translation/ResourceTranslator.php",
+		"/D/www/webforge-translation/lib/Webforge/Translation/Translator.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/ContainerTestCase.php",
+		"/D/www/psc-cms/lib/Psc/HTML/Base.php",
+		"/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Philipp Scheit/Desktop/cms.de.txt",
+		"/C/Users/Philipp Scheit/Desktop/cms.en.txt",
+		"/C/Users/Philipp Scheit/Desktop/cms.fr.txt",
+		"/C/Users/Philipp Scheit/Desktop/welcome.html.txt",
+		"/D/www/psc-cms/lib/Psc/UI/Tabs2.php",
+		"/D/www/psc-cms/lib/Psc/TPL/Template.php",
+		"/D/www/psc-cms/tests/Psc/UI/Tabs2Test.php",
+		"/D/www/psc-cms/resources/i18n/cms-messages.php",
+		"/D/www/psc-cms/lib/Psc/Code/Code.php",
+		"/D/www/psc-cms/lib/Psc/Net/HTTP/RequestHandler.php",
+		"/D/www/psc-cms/lib/Psc/CMS/UserManager.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/Mock/SessionMock.php",
+		"/D/www/kcc/application/tpl/CMS/loginform.html",
+		"/D/www/psc-cms/tests/Psc/MailChimp/APITest.php",
+		"/D/www/psc-cms/lib/Psc/URL/Request.php",
+		"/D/www/psc-cms/lib/Psc/URL/RequestDispatcher.php",
+		"/D/www/psc-cms/lib/Psc/Doctrine/Helper.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/CMSRequestDispatcher.php",
+		"/D/www/psc-cms/lib/Psc/Code/Test/CMSAcceptanceTester.php",
+		"/D/www/psc-cms/lib/Psc/Net/HTTP/ResponseConverter.php",
+		"/D/www/psc-cms/lib/Psc/Net/HTTP/RequestConverter.php",
+		"/D/www/psc-cms/lib/Psc/Net/ServiceErrorPackage.php",
+		"/D/www/psc-cms/lib/Psc/Net/HTTP/Request.php",
+		"/D/www/psc-cms/tests/Psc/Net/HTTP/RequestTest.php",
+		"/D/www/psc-cms/tests/Psc/Net/HTTP/RequestAcceptanceTest.php",
+		"/D/www/psc-cms/lib/Psc/UI/CommentsWidget.php",
+		"/D/www/psc-cms/lib/Psc/CMS/RequestMeta.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Service/CMSService.php",
+		"/D/www/psc-cms/lib/Psc/Session/Session.php",
+		"/D/www/psc-cms/lib/Psc/PHP/CookieManager.php",
+		"/D/www/psc-cms/lib/Psc/Net/RequestMatcher.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Service/ControllerService.php",
+		"//zbox/Users/zboxer/AppData/Roaming/XBMC/userdata/advancedsettings.xml",
+		"/D/www/psc-cms/lib/Psc/CMS/User.php",
+		"/D/www/psc-cms/lib/Psc/URL/Response.php",
+		"/D/www/psc-cms/lib/Psc/Net/HTTP/Response.php",
+		"/D/www/psc-cms/lib/Psc/Net/ServiceRequest.php",
+		"/D/www/kcc/application/src/tpl/CMS/loginform.html",
+		"/D/www/psc-cms/lib/Psc/CMS/Roles/AbstractControllerContainer.php",
+		"/D/www/psc-cms/lib/Psc/CMS/Auth.php"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"D:\\www\\psc-cms\\lib,D:\\www\\psc-cms\\tests",
+			"D:\\www\\psc-cms\\tests",
+			"D:\\www\\psc-cms\\lib",
+			"D:\\www\\psc-cms\\tests\\Psc",
+			"D:\\www\\psc-cms\\tests,*.php",
+			"D:\\www\\psc-cms\\tests",
+			"D:\\www\\psc-cms\\tests\\Psc",
+			"D:\\www\\psc-cms",
+			"D:\\www\\psc-cms\\lib",
+			"D:\\www\\SublimeCodeIntel"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tab",
+			"createurl",
+			"getpath",
+			"geturl",
+			"getlinkrelationsfor",
+			"getdoctrinepackage",
+			"getentitymanager",
+			"copy",
+			"injectrevision",
+			"inject",
+			"languages",
+			"getroot",
+			"language",
+			"sort",
+			"comment",
+			"component",
+			"comment",
+			"createcontainer",
+			"pages",
+			"setlanguage",
+			"contextaware",
+			"calendar",
+			"navigation",
+			"entities.member",
+			"entities.city",
+			"entities.calendar.insert",
+			"trans",
+			"$this->html",
+			"language",
+			"COntain",
+			"initlabeler",
+			"entitygridpanel",
+			"$domain",
+			"getname",
+			"getproperty",
+			"getwhitelistproperties",
+			"property",
+			"getlabel",
+			"inittranslatedlabeler",
+			"initlabeler",
+			"labeler",
+			"init",
+			"initentitymetafor",
+			"entityformrequest",
+			"nitlocale",
+			"setlanguage",
+			"carte",
+			"sidebar.map",
+			"cms",
+			"rightcontent",
+			"getproduction",
+			"rightcontent",
+			"gettranslator",
+			"getwelcometemplate",
+			"entityformpanel",
+			"dependencies",
+			"PanelButtons",
+			"translationcontainer",
+			"createcontainer",
+			"panelbuttons",
+			"panelbutton",
+			"panelbuttons",
+			"translationcontainer",
+			"loadcatalogue",
+			"projectpackage",
+			"getpackage",
+			"translator",
+			"addnewbutton",
+			"addbutton",
+			",",
+			"=>",
+			"mimecontenttype",
+			"$this->password",
+			"getcontenttype",
+			"format",
+			"settype",
+			"dispatch",
+			"authent",
+			"authentication",
+			"debug",
+			"body",
+			"data",
+			"insertentity",
+			"authcontroller",
+			"getuser",
+			"session",
+			"user",
+			"getcontainer",
+			"controllerfactory",
+			"container",
+			"getcontrollergclass",
+			"set",
+			"initservices",
+			"user",
+			"environmentcontainer",
+			"getenvironmentcontainer",
+			"getsession",
+			"session",
+			"initrequestmatch",
+			"environmentcontainer",
+			"routecontroller",
+			"initservices",
+			"success",
+			"cookiedomain",
+			"init",
+			"session",
+			"persona",
+			"accept",
+			"'accept",
+			"accept",
+			"referer",
+			"contextinfo",
+			"debuginfo",
+			"expandnamespace",
+			"i18n",
+			"function __",
+			"tabs2",
+			"i18n",
+			"setlanguage",
+			"tab0template",
+			"welcome",
+			"getlanguages",
+			"eq",
+			"recipient",
+			"clonearguments",
+			"args",
+			"clone",
+			"bridgeditem"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"context",
+			"$languages",
+			"\\\\",
+			"Socktrine"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Cojoko.sublime-project",
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "docs/in-and-out.md",
+					"settings":
+					{
+						"buffer_size": 1860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/Markdown Preview/sample.md",
+					"settings":
+					{
+						"buffer_size": 4048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								712
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/MarkdownPreview.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								496,
+								496
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/snippets/cojoko/property.sublime-snippet",
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/User/snippets/markdown/link.sublime-snippet",
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/Philipp Scheit/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+					"settings":
+					{
+						"buffer_size": 30564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6175,
+								6175
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1357.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "tests/cookbook/grid/grid.json",
+					"settings":
+					{
+						"buffer_size": 532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"boss": true,
+								"browser": true,
+								"curly": false,
+								"devel": false,
+								"eqeqeq": true,
+								"eqnull": true,
+								"globals":
+								{
+									"$": true,
+									"CoMun": true,
+									"Psc": true,
+									"QUnit": true,
+									"asyncTest": true,
+									"define": true,
+									"expect": true,
+									"module": true,
+									"ok": true,
+									"require": true,
+									"start": true,
+									"stop": true,
+									"test": true,
+									"tiptoi": true
+								},
+								"immed": true,
+								"jquery": true,
+								"latedef": true,
+								"newcap": true,
+								"noarg": true,
+								"sub": true,
+								"trailing": false,
+								"undef": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"jshint": "jshint"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 358.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.phpunit":
+	{
+		"height": 382.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"output.xdebug_inspect":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"grid.j",
+				"tests/cookbook/grid/grid.json"
+			],
+			[
+				"docs",
+				"docs/in-and-out.md"
+			],
+			[
+				"coj",
+				"Cojoko.sublime-project"
+			],
+			[
+				"navigationnodeentity",
+				"lib/Psc/CMS/Roles/NavigationNodeEntity.php"
+			],
+			[
+				"deployco",
+				"lib/Psc/System/Console/DeployCommand.php"
+			],
+			[
+				"instancer",
+				"lib/Psc/Entities/Instancer.php"
+			],
+			[
+				"navigationcon",
+				"lib/Psc/CMS/Controller/NavigationController.php"
+			],
+			[
+				"navigationcontroller",
+				"tests/Psc/CMS/Controller/NavigationControllerTest.php"
+			],
+			[
+				"base.php",
+				"lib/Psc/Code/Test/Base.php"
+			],
+			[
+				"contentstreamco",
+				"lib/Psc/CMS/Controller/ContentStreamController.php"
+			],
+			[
+				"navigationnodere",
+				"lib/Psc/Doctrine/NavigationNodeRepository.php"
+			],
+			[
+				"doctrinecom",
+				"lib/Psc/System/Console/DoctrineCommand.php"
+			],
+			[
+				"contentstramco",
+				"lib/Psc/CMS/Controller/ContentStreamController.php"
+			],
+			[
+				"projectmain",
+				"lib/Psc/CMS/ProjectMain.php"
+			],
+			[
+				"simplecontainerco",
+				"lib/Psc/CMS/Controller/SimpleContainerController.php"
+			],
+			[
+				"containerco",
+				"lib/Psc/CMS/Controller/ContainerController.php"
+			],
+			[
+				"contentstreamcontainer",
+				"lib/Psc/CMS/Controller/ContentStreamContainerController.php"
+			],
+			[
+				"pageco",
+				"lib/Psc/CMS/Controller/PageController.php"
+			],
+			[
+				"abstractentityco",
+				"lib/Psc/CMS/Controller/AbstractEntityController.php"
+			],
+			[
+				"pagecontroller",
+				"/D/www/psc-cms/lib/Psc/CMS/Controller/PageController.php"
+			],
+			[
+				"psc.php",
+				"lib/Psc/PSC.php"
+			],
+			[
+				"config.php",
+				"lib/Psc/Config.php"
+			],
+			[
+				"project",
+				"lib/Psc/CMS/Project.php"
+			],
+			[
+				"project.php",
+				"lib/Psc/Project.php"
+			],
+			[
+				"projecttest",
+				"tests/Psc/CMS/ProjectTest.php"
+			],
+			[
+				"psccmsproject.php",
+				"lib/Psc/CMS/Project.php"
+			],
+			[
+				"labeler",
+				"lib/Psc/CMS/Labeler.php"
+			],
+			[
+				"entitygri",
+				"lib/Psc/CMS/EntityGridPanel.php"
+			],
+			[
+				"sort",
+				"lib/Psc/CMS/Controller/SortingController.php"
+			],
+			[
+				"panelbutton",
+				"lib/Psc/UI/PanelButtons.php"
+			],
+			[
+				"cms.en.ph",
+				"resources/translations/cms.en.php"
+			],
+			[
+				"cms.de",
+				"resources/translations/cms.de.php"
+			],
+			[
+				"cms.en.php",
+				"resources/translations/cms.en.php"
+			],
+			[
+				"cms.fr",
+				"resources/translations/cms.fr.php"
+			],
+			[
+				"pagecontrollertest",
+				"tests/Psc/CMS/Controller/PageControllerTest.php"
+			],
+			[
+				"cms.en",
+				"resources/translations/cms.en.php"
+			],
+			[
+				"welcome.html",
+				"application/tpl/welcome.html"
+			],
+			[
+				"cms.fr.",
+				"resources/translations/cms.fr.php"
+			],
+			[
+				"jstester",
+				"lib/Psc/Code/Test/JSTester.php"
+			],
+			[
+				"joosesnippetwi",
+				"lib/Psc/JS/JooseSnippetWidget.php"
+			],
+			[
+				"pscuipagesmenu",
+				"lib/Psc/UI/PagesMenu.php"
+			],
+			[
+				"",
+				"tests/Psc/CMS/Controller/NavigationControllerTest.php"
+			],
+			[
+				"frontendco",
+				"lib/Psc/Code/Test/FrontendCodeTester.php"
+			],
+			[
+				"frontendcodeet",
+				"tests/Psc/Code/Test/FrontendCodeTesterTest.php"
+			],
+			[
+				"navigationco",
+				"lib/Psc/CMS/Controller/NavigationController.php"
+			],
+			[
+				"navigationcontrollertest",
+				"tests/Psc/CMS/Controller/NavigationControllerTest.php"
+			],
+			[
+				"pagesmenu",
+				"lib/Psc/UI/PagesMenu.php"
+			],
+			[
+				"navigationcontroll",
+				"lib/Psc/CMS/Controller/NavigationController.php"
+			],
+			[
+				"abstractcon",
+				"lib/Psc/CMS/Roles/AbstractContainer.php"
+			],
+			[
+				"main.php",
+				"lib/Psc/CMS/ProjectMain.php"
+			],
+			[
+				"welcome",
+				"application/tpl/welcome.html"
+			],
+			[
+				"template",
+				"lib/Psc/TPL/Template.php"
+			],
+			[
+				"abstractcontainer.php",
+				"lib/Psc/CMS/Roles/AbstractContainer.php"
+			],
+			[
+				"translationcontainer",
+				"lib/Psc/CMS/Translation/Container.php"
+			],
+			[
+				"cms.enphp",
+				"resources/translations/cms.en.php"
+			],
+			[
+				"cms.de.php",
+				"resources/translations/cms.de.php"
+			],
+			[
+				"template.php",
+				"lib/Psc/TPL/Template.php"
+			],
+			[
+				"fr.",
+				"resources/translations/cms.fr.php"
+			],
+			[
+				"entryentity",
+				"lib/Psc/TPL/ContentStream/EntryEntity.php"
+			],
+			[
+				"converter",
+				"lib/Psc/TPL/ContentStream/Converter.php"
+			],
+			[
+				"contentstreamconverter",
+				"lib/Psc/TPL/ContentStream/Converter.php"
+			],
+			[
+				"compiledpara",
+				"lib/Psc/Entities/ContentStream/CompiledParagraph.php"
+			],
+			[
+				"entry.php",
+				"lib/Psc/Entities/ContentStream/Entry.php"
+			],
+			[
+				"paragraph",
+				"lib/Psc/Entities/ContentStream/Paragraph.php"
+			],
+			[
+				"layoutmana",
+				"lib/Psc/UI/LayoutManager.php"
+			],
+			[
+				"layoutmanagertest",
+				"tests/Psc/UI/LayoutManagerTest.php"
+			],
+			[
+				"rightcontentet",
+				"tests/Psc/CMS/RightContentTest.php"
+			],
+			[
+				"cms.fr.php",
+				"resources/translations/cms.fr.php"
+			],
+			[
+				"layoutman",
+				"lib/Psc/UI/LayoutManager.php"
+			],
+			[
+				"contentstreamcon",
+				"lib/Psc/CMS/Controller/ContentStreamController.php"
+			],
+			[
+				"layoutmanager",
+				"lib/Psc/UI/LayoutManager.php"
+			],
+			[
+				"pagecont",
+				"lib/Psc/CMS/Controller/PageController.php"
+			],
+			[
+				"navigation.php",
+				"lib/Psc/CMS/Controller/NavigationController.php"
+			],
+			[
+				"page.php",
+				"lib/Psc/HTML/Page.php"
+			],
+			[
+				"pagetest",
+				"tests/Psc/HTML/PageTest.php"
+			],
+			[
+				"frameworkpage",
+				"lib/Psc/HTML/FrameworkPage.php"
+			],
+			[
+				"page5.php",
+				"lib/Psc/HTML/Page5.php"
+			],
+			[
+				"entityviewpa",
+				"lib/Psc/CMS/EntityViewPackage.php"
+			],
+			[
+				"entitygridpa",
+				"lib/Psc/CMS/EntityGridPanel.php"
+			],
+			[
+				"entityproper",
+				"lib/Psc/CMS/EntityPropertyMeta.php"
+			],
+			[
+				"entitymeta",
+				"lib/Psc/CMS/EntityMeta.php"
+			],
+			[
+				"entitymet",
+				"lib/Psc/CMS/EntityMeta.php"
+			],
+			[
+				"property",
+				"lib/Psc/CMS/EntityPropertyMeta.php"
+			],
+			[
+				"abstractentitycontroll",
+				"lib/Psc/CMS/Controller/AbstractEntityController.php"
+			],
+			[
+				"index.php",
+				"www/index.php"
+			],
+			[
+				"translationconta",
+				"lib/Psc/CMS/Translation/Container.php"
+			],
+			[
+				"abstractcontainer",
+				"lib/Psc/CMS/Roles/AbstractContainer.php"
+			],
+			[
+				"cms.",
+				"resources/translations/cms.de.php"
+			],
+			[
+				"translationcont",
+				"lib/Psc/CMS/Translation/Container.php"
+			],
+			[
+				"rightco",
+				"lib/Psc/CMS/RightContent.php"
+			],
+			[
+				"rightcontent",
+				"lib/Psc/CMS/RightContent.php"
+			],
+			[
+				"container.php",
+				"lib/Psc/CMS/Translation/Container.php"
+			],
+			[
+				"abstractcontainertest",
+				"tests/Psc/CMS/Roles/AbstractContainerTest.php"
+			],
+			[
+				"migr",
+				"migrate-1.3.xx.md"
+			],
+			[
+				"composer.json",
+				"composer.json"
+			],
+			[
+				"dependencies",
+				"lib/Psc/CMS/Roles/ControllerDependenciesProvider.php"
+			],
+			[
+				"entityviewpackagetest",
+				"tests/Psc/CMS/EntityViewPackageTest.php"
+			],
+			[
+				"formpane",
+				"lib/Psc/UI/FormPanel.php"
+			],
+			[
+				"psccmstranslationloader.php",
+				"lib/Psc/CMS/Translation/Loader.php"
+			],
+			[
+				"loader.php",
+				"lib/Psc/XML/Loader.php"
+			],
+			[
+				"translationloadertest",
+				"tests/Psc/CMS/Translation/LoaderTest.php"
+			],
+			[
+				"projectmaintest",
+				"tests/Psc/CMS/ProjectMainTest.php"
+			],
+			[
+				"translationcon",
+				"lib/Psc/CMS/Translation/Container.php"
+			],
+			[
+				"container",
+				"lib/Psc/CMS/Container.php"
+			],
+			[
+				"componentsvalidator",
+				"tests/Psc/Form/ComponentsValidatorTest.php"
+			],
+			[
+				"servicebase",
+				"lib/Psc/Code/Test/ServiceBase.php"
+			],
+			[
+				"psctestdatabasetestcase",
+				"lib/Psc/Test/DatabaseTestCase.php"
+			],
+			[
+				"entitysevi",
+				"tests/Psc/CMS/Service/EntityServiceTest.php"
+			],
+			[
+				"entityservice",
+				"lib/Psc/CMS/Service/EntityService.php"
+			],
+			[
+				"factory.php",
+				"lib/Psc/CMS/Controller/Factory.php"
+			],
+			[
+				"entityservicetest",
+				"tests/Psc/CMS/Service/EntityServiceTest.php"
+			],
+			[
+				"entitygridpaneltest",
+				"tests/Psc/CMS/EntityGridPanelTest.php"
+			],
+			[
+				"entityformpaneltest",
+				"tests/Psc/CMS/EntityFormPanelTest.php"
+			],
+			[
+				"formpanel",
+				"lib/Psc/UI/FormPanel.php"
+			],
+			[
+				"migra",
+				"migrate-1.3.xx.md"
+			],
+			[
+				"factory",
+				"lib/Psc/CMS/Controller/Factory.php"
+			],
+			[
+				"articlesorting",
+				"lib/Psc/Test/ArticleSortingController.php"
+			],
+			[
+				"abstractentitycontrollertest",
+				"tests/Psc/CMS/Controller/AbstractEntityControllerTest.php"
+			],
+			[
+				"database",
+				"lib/Psc/Test/DatabaseTestCase.php"
+			],
+			[
+				"controllercontain",
+				"lib/Psc/CMS/Roles/ControllerContainer.php"
+			],
+			[
+				"doublesman",
+				"lib/Psc/Code/Test/DoublesManager.php"
+			],
+			[
+				"controllerbasetest",
+				"tests/Psc/CMS/Controller/ControllerBaseTest.php"
+			],
+			[
+				"abstractentitycontrollerbasetest",
+				"tests/Psc/CMS/Controller/AbstractEntityControllerBaseTest.php"
+			],
+			[
+				"abstractentitycontrolertest",
+				"tests/Psc/CMS/Controller/AbstractEntityControllerTest.php"
+			],
+			[
+				"controllercontainer",
+				"lib/Psc/CMS/Roles/ControllerContainer.php"
+			],
+			[
+				"simpledependen",
+				"lib/Psc/CMS/Roles/SimpleControllerDependenciesProvider.php"
+			],
+			[
+				"controllerfactory",
+				"lib/Psc/CMS/Controller/Factory.php"
+			],
+			[
+				"articlesortingco",
+				"lib/Psc/Test/ArticleSortingController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"kcc",
+				"/D/www/kcc/kcc.sublime-project"
+			],
+			[
+				"testeplate",
+				"/D/www/webforge-testplate/testplate.sublime-project"
+			],
+			[
+				"psc-cms-js",
+				"/D/www/psc-cms-js/psc-cms-js.sublime-project"
+			],
+			[
+				"webf",
+				"/D/www/webforge/webforge.sublime-project"
+			],
+			[
+				"hagedorn",
+				"/D/www/Hagedorn/hagedorn.sublime-project"
+			],
+			[
+				"psc-cms",
+				"/D/www/psc-cms/psc-cms.sublime-project"
+			],
+			[
+				"comun",
+				"/D/www/comun/comun.sublime-project"
+			],
+			[
+				"trans",
+				"/D/www/webforge-translation/translation.sublime-project"
+			],
+			[
+				"webforge",
+				"/D/www/webforge/webforge.sublime-project"
+			],
+			[
+				"com",
+				"/D/www/comun/comun.sublime-project"
+			],
+			[
+				"testplate",
+				"/D/www/webforge-testplate/testplate.sublime-project"
+			],
+			[
+				"persona",
+				"/D/www/webforge-persona/persona.sublime-project"
+			],
+			[
+				"g",
+				"/D/www/GREG/greg.sublime-project"
+			],
+			[
+				"transl",
+				"/D/www/webforge-translation/translation.sublime-project"
+			],
+			[
+				"translat",
+				"/D/www/webforge-translation/translation.sublime-project"
+			],
+			[
+				"common",
+				"/D/www/webforge-common/webforge-common.sublime-project"
+			],
+			[
+				"webforge common",
+				"/D/www/webforge-common/webforge-common.sublime-project"
+			],
+			[
+				"cmun",
+				"/D/www/comun/comun.sublime-project"
+			],
+			[
+				"webforgeco",
+				"/D/www/webforge-common/webforge-common.sublime-project"
+			],
+			[
+				"image",
+				"/D/www/psc-cms-image/psc-cms-image.sublime-project"
+			],
+			[
+				"psc cms image",
+				"/D/www/psc-cms-image/psc-cms-image.sublime-project"
+			],
+			[
+				"hagdo",
+				"/D/www/Hagedorn/hagedorn.sublime-project"
+			],
+			[
+				"hagedo",
+				"/D/www/Hagedorn/hagedorn.sublime-project"
+			],
+			[
+				"webfor",
+				"/D/www/webforge/webforge.sublime-project"
+			],
+			[
+				"",
+				"/D/www/comun/comun.sublime-project"
+			],
+			[
+				"co",
+				"/D/www/comun/comun.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true
+}

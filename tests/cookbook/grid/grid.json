@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Google",
+    "isin": "US38259P5089",
+    "wkn": "A0B7FY",
+    "currency": "USD"
+  },
+
+  {
+    "title": "Interxion",
+    "isin": "NL0009693779",
+    "wkn": "A1H62B",
+    "currency": "EUR"
+  },
+
+  {
+    "title": "Nestlé",
+    "isin": "CH0038863350",
+    "wkn": "A0Q4DC",
+    "currency": "CHF"
+  },
+
+  {
+    "title": "Ford Motor Co.",
+    "isin": "US3453708600",
+    "wkn": "502391",
+    "currency": "USD"
+  },
+
+  {
+    "title": "adidas",
+    "isin": "DE000A1EWWW0",
+    "wkn": "A1EWWW",
+    "currency": "EUR"
+  }
+]
