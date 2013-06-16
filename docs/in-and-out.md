@@ -16,7 +16,7 @@ define(['Cojoko'], function (Cojoko) {
 });
 ```
 
-### basic classlllllllllllllllllll
+### basic class
 
 ```javascript
 Cojoko.Class('ACME.Exchange.Share', {
