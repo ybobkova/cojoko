@@ -8,7 +8,7 @@ define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash','test-files/Jo
     return t.setup(test, {reader: reader});
   };
 
-  test("read a Joose class with Joose", function () {
+  test("reads the Psc.Response Class from Joose and inits all properties", function () {
     var that = setup(this);
 
     var CojokoResponse = this.reader.read(Psc.Response);
@@ -34,4 +34,28 @@ define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash','test-files/Jo
     that.assertFalse(body.required);
     that.assertEquals(null, body.init);
   });
+
+  test("reads the Psc.Response and adds all methods", function () {
+    var that = setup(this);
+
+    var CojokoResponse = this.reader.read(Psc.Response);
+
+    var methods = CojokoResponse.reflection.getMethods();
+
+    that.assertLength(3, _.toArray(methods));
+
+    that.assertAttributeNotUndefined('toString', methods);
+    that.assertAttributeNotUndefined('isValidation', methods);
+
+  });
+
+  test("reads the Psc.Response and converts the after initialize function to init()", function () {
+    var that = setup(this);
+
+    var CojokoResponse = this.reader.read(Psc.Response);
+    var methods = CojokoResponse.reflection.getMethods();
+
+    that.assertAttributeNotUndefined('init', methods);
+  });
+  
 });
