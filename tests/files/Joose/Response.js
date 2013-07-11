@@ -1,4 +1,4 @@
-define(['joose', 'Psc/HTTPMessage'], function (Joose) {
+define(['joose', './HTTPMessage'], function (Joose) {
   Joose.Class('Psc.Response', {
     isa: Psc.HTTPMessage,
   
@@ -6,6 +6,7 @@ define(['joose', 'Psc/HTTPMessage'], function (Joose) {
       code: { is : 'rw', required: true },
       reason: { is : 'rw', required: false, init: null },
       body: { is : 'rw', required: false, init: null }
+
       // headers die headers als string (werden dann geparsed)
     },
     
