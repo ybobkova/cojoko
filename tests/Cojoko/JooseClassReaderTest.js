@@ -1,6 +1,6 @@
 define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash','test-files/Joose/Response'], function(t, testSetup, esprima, JSON, _) {
   
-  module("Cojoko.Experiments.JooseClassReader");
+  module("Cojoko.JooseClassReader");
 
   var setup = function (test) {
     var reader = testSetup.container.getJooseReader();
