@@ -29,7 +29,7 @@ Cojoko.Class('ACME.Exchange.Share', {
   },
 
   toString: function () {
-    return this.title+ ' ('+this.isin+'/'+this.wkn+')';
+    return this.title+' ('+this.isin+'/'+this.wkn+')';
   }
 
 });
