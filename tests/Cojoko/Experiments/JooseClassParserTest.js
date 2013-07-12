@@ -12,18 +12,7 @@ define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'text!test-files/Joose/
     var that = setup(this);
 
     var syntax = esprima.parse(jooseResponse);
-    console.log(JSON.stringify(syntax, undefined, 2));
-  });
-
-  test("read a Joose class with Joose", function () {
-    var meta = Psc.Response.meta;
-
-    meta.getAttributes().eachAll(function (attribute, name, isOwn) {
-      console.log('class has attribute ' + name)
-
-      if (typeof(attribute.init) === "function") {
-        console.log(attribute.init());
-      }
-    })
+    
+    this.assertNotUndefined(JSON.stringify(syntax, undefined, 2));
   });
 });
