@@ -9,14 +9,18 @@ define(['qunit-assert', 'test-setup', 'text!test-files/Cojoko/HTTPMessage.cojoko
     return t.setup(test, {writer: writer, jooseReader: jooseReader});
   };
   
-  test("the writer returns a CojokoClass as CojokoCode", function() {
+  test("acceptance: the writer returns a CojokoClass as CojokoCode", function() {
     var that = setup(this);
 
     var httpMessage = this.jooseReader.read(Psc.HTTPMessage);
 
+    var eolVisible = function (code) {
+      return code.replace(/\n/g, "\n-n-").replace(/ /g, ".");
+    };
+
     this.assertEquals(
-      HTTPMessageCojokoCode,
-      this.writer.write(httpMessage)
+      eolVisible(HTTPMessageCojokoCode),
+      eolVisible(this.writer.write(httpMessage))
     );
   });
 });
