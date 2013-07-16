@@ -21,15 +21,17 @@ define(['Cojoko'], function (Cojoko) {
 ```javascript
 Cojoko.Class('ACME.Exchange.Share', {
 
-  has: {
+  properties: {
     title: { is : 'rw', required: true, isPrivate: true },
     isin: { is : 'rw', required: true, isPrivate: true },
     wkn: { is : 'rw', required: true, isPrivate: true },
     currency: { is : 'rw', required: true, isPrivate: true }
   },
 
-  toString: function () {
-    return this.title+' ('+this.isin+'/'+this.wkn+')';
+  methods: {
+    toString: function () {
+      return this.title+' ('+this.isin+'/'+this.wkn+')';
+    }
   }
 
 });
@@ -45,12 +47,14 @@ Cojoko.Class('ACME.Exchange.Share', {
 ```javascript
 Cojoko.Class('ACME.Exchange.Price', {
 
-  has: {
+  properties: {
 
   },
 
-  init: function (props) {
+  methods: {
+    init: function (props) {
 
+    }
   }
 });
 ```
