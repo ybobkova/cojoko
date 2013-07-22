@@ -63,6 +63,11 @@ module.exports = function(grunt) {
            urls: mapToUrl('tests/**/*Test.html')
         }
       },
+      single: {
+        options: {
+          urls: '<%= qunit.single.urls %>'
+        }
+      },
       options: {
         timeout: 2000,
         inject: false
@@ -132,8 +137,15 @@ module.exports = function(grunt) {
 
   grunt.task.registerTask('pack', ['jshint', 'requirejs']);
   grunt.task.registerTask('default', ['jshint', 'connect:server', 'qunit:all']);
-  grunt.task.registerTask('test', ['connect:server', 'qunit:all']);
   grunt.task.registerTask('server', ['connect:listenserver']);
   grunt.task.registerTask('travis', ['jshint', 'connect:server', 'qunit:all']);
-  
+
+  grunt.task.registerTask('test', 'runs testfiles per minimatch finder', function (tests) {
+    if (tests) {
+      grunt.config.set('qunit.single.urls', mapToUrl('tests/**/'+tests+'*Test.html'));
+      grunt.task.run('connect:server', 'qunit:single');
+    } else {
+      grunt.task.run('connect:server', 'qunit:all');
+    }
+  });
 };
