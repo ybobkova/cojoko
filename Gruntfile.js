@@ -142,7 +142,18 @@ module.exports = function(grunt) {
 
   grunt.task.registerTask('test', 'runs testfiles per minimatch finder', function (tests) {
     if (tests) {
-      grunt.config.set('qunit.single.urls', mapToUrl('tests/**/'+tests+'*Test.html'));
+      var pattern;
+      tests = tests.replace(/\./g, '/');
+
+      if (tests.match(/^\//)) {
+        pattern = 'tests/'+tests+'*Test.html';
+      } else {
+        pattern = 'tests/**/'+tests+'*Test.html';
+      }
+
+      grunt.log.writeln('pattern: '+pattern);
+      grunt.config.set('qunit.single.urls', mapToUrl(pattern));
+      
       grunt.task.run('connect:server', 'qunit:single');
     } else {
       grunt.task.run('connect:server', 'qunit:all');

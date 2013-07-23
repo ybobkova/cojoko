@@ -25,7 +25,7 @@ Cojoko.Class('ACME.Exchange.Share', {
     title: { is : 'rw', required: true, isPrivate: true },
     isin: { is : 'rw', required: true, isPrivate: true },
     wkn: { is : 'rw', required: true, isPrivate: true },
-    currency: { is : 'rw', required: true, isPrivate: true }
+    price: { is : 'rw', required: true, isPrivate: true, type: ACME.Exchange.Price }
   },
 
   methods: {
@@ -41,22 +41,58 @@ Cojoko.Class('ACME.Exchange.Share', {
  * the class has 4 properties title, isin, wkn, currency
  * the class has one simple method that transform the class to a string
 
-> Joose backward compability: Joose compiled Cojoko can use `this.$$title` for referencing private properties.
-
-
 ```javascript
 Cojoko.Class('ACME.Exchange.Price', {
 
   properties: {
+    value: { is : 'g', required: true, isPrivate: true },
+    currency: { is : 'g', required: true, isPrivate: true },
 
+    decimals: { is : 'gs', required: false, isPrivate: true, init: 2 },
+    thousandSeparator: { is : 'g', required: false, isPrivate: true },
+    decimalsSeparator: { is : 'g', required: false, isPrivate: true }
   },
 
   methods: {
     init: function (props) {
+
+      if (!props.decimalsSeparator) {
+        this.decimalsSeparator = props.currency === 'USD' ? '.' : ',';
+      }
+
+      if (!props.thousandsSeparator) {
+        this.thousandsSeparator = props.currency === 'USD' ? ',' : '.';
+      }
 
     }
   }
 });
 ```
 
-> Joose backward compability: the construct `after: {  initialize: function() {} }` pattern will be converted into the init function.
+the following applies:
+
+```javascript
+var googPrice = new ACME.Exchange.Price({ value: 910.70, currency: 'USD' });
+
+that.assertEquals(910.70, googPrice.getValue());
+that.assertEquals('USD', googPrice.getCurrency());
+that.assertEquals(2, googPrice.getDecimals());
+
+// values from init()
+that.assertEquals(',', googPrice.getThousandsSeparator());
+that.assertEquals('.', googPrice.getDecimalsSeparator());
+
+// no setters
+that.assertUndefined(googPrice.setValue;
+that.assertUndefined(googPrice.setCurrency;
+
+googPrice.setDecimals(4);
+that.assertEquals(4, googPrice.getDecimals());
+```
+
+### converting from joose
+
+  * Joose compiled Cojoko can use `this.$$title` for referencing private properties.
+  * the construct `after: {  initialize: function() {} }` pattern will be converted into the init function.
+  * is: 'rw' will be converted to 'gs'
+
