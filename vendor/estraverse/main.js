@@ -1,4 +1,3 @@
-define(function(require, exports, module) {
 /*
   Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>
@@ -486,4 +485,3 @@ define(function(require, exports, module) {
     exports.Controller = Controller;
 }));
 /* vim: set sw=4 ts=4 et tw=80 : */
-});
