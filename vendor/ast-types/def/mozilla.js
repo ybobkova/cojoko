@@ -1,4 +1,6 @@
-define(function (require, exports, module) {var types = require("../lib/types");
+define(function (require, exports, module) {
+    require('./core');
+    var types = require("../lib/types");
 var def = types.Type.def;
 var or = types.Type.or;
 var geq = require("../lib/shared").geq;
