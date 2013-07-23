@@ -1,4 +1,4 @@
-define(['qunit-assert', 'test-setup', 'escodegen'], function(t, testSetup, escodegen) {
+define(['require', 'qunit-assert', 'test-setup', 'escodegen', 'ast-types'], function(t, testSetup, escodegen) {
   
   module("Cojoko.Experiments.CodeGenTest");
 
@@ -19,6 +19,18 @@ define(['qunit-assert', 'test-setup', 'escodegen'], function(t, testSetup, escod
         right: { type: 'Literal', value: 2 }
       })
     );
+  });
+
+  test("generate with ast-types", function () {
+    var that = setup(this);
+
+    var n = require("ast-types").namedTypes;
+    var b = require("ast-types").builders;
+
+    var fooId = b.identifier("foo");
+    var ifFoo = b.ifStatement(fooId, b.blockStatement([
+      b.expressionStatement(b.callExpression(fooId, []))
+    ]));
 
   });
 });
