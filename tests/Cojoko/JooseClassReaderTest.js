@@ -9,6 +9,45 @@ define([
   
   module("Cojoko.JooseClassReader");
 
+    Joose.Role('Test.Flying', {
+      after: {
+        initialize: function () {
+          // expand wings
+        }
+      },
+
+      methods: {
+        fly: function () {}
+      }
+    });
+
+    Joose.Role('Test.Swimming', {
+      before: {
+        initialize: function () {
+          // prepare rubber-duck
+        }
+      },
+
+      methods: {
+        swim: function () {}
+      }
+    });
+
+    Joose.Role('Test.Traveling', {
+      does: [Test.Flying, Test.Swimming]
+    });
+
+
+    Joose.Class('Test.Citizen', {
+      does: Test.Traveling,
+
+      after:{
+        initialize: function () {
+          // pack the bags
+        }
+      }
+    });
+
   var setup = function (test) {
     var reader = testSetup.container.getJooseReader();
 
@@ -87,22 +126,6 @@ define([
   test("reads only the roles of the citizen class not the Roles of the hierarchy", function () {
     var that = setup(this);
 
-    Joose.Role('Test.Flying', {
-      methods: {
-        fly: function () {}
-      }
-    });
-
-    Joose.Role('Test.Swimming', {
-      methods: {
-        swim: function () {}
-      }
-    });
-
-    Joose.Role('Test.Traveling', {
-      does: [Test.Flying, Test.Swimming]
-    });
-
     var Citizen = Joose.Class({
       does: Test.Traveling
     });
@@ -111,6 +134,34 @@ define([
       .hasMixin('Test.Traveling')
       .hasNotMixin('Test.Swimming')
       .hasNotMixin('Test.Flying')
+    ;
+
+  });
+
+  test("reads empty is attribute", function () {
+    var that = setup(this);
+
+    var JooseClassWithNoIsProperty = Joose.Class({
+
+      has: {
+        noIsProperty: { is: '', required: false }
+      }
+
+    });
+
+    that.assertCojoko(this.reader.read(JooseClassWithNoIsProperty))
+      .property('noIsProperty').is('').end()
+    ;
+
+  });
+
+
+  test("reads only the initialize method from the citizen class and no other methods of the whole hierarchy", function () {
+    var that = setup(this);
+
+    that.assertCojoko(this.reader.read(Test.Citizen))
+      .methodsCount(1)
+      .method('init').end()
     ;
 
   });
