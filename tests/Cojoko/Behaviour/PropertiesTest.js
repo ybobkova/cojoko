@@ -2,7 +2,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
   
   module("Cojoko.Behaviour.Properties");
 
-  var Price = Cojoko.Class({
+  var Price = Cojoko.Class('TestPrice', {
   
     properties: {
       value: { is : 'g', required: true, isPrivate: true },
