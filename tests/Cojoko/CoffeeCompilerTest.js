@@ -39,5 +39,4 @@ define(['qunit-assert', 'test-setup', 'Cojoko/Class'], function(t, testSetup, Co
     this.assertContains("SimpleClass.prototype.doSomething = function ()", js);
     this.assertContains("SimpleClass.prototype.doOther = function ()", js);
   });
-
 });

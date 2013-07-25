@@ -152,6 +152,19 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
     this.assertNotSame(init1, init2);
   });
 
+  test("all required properties has to be set", function () {
+    var that = setup(this);
+
+    try {
+      new Price({currency: 'EUR'});
+
+      that.fail('no Exception was thrown, allthough value is missing');
+    } catch (Ex) {
+      that.ok('exception cought with: '+Ex.toString());
+      that.assertContains('missing property value');
+    }
+  });
+
   test("only setters are generated if s is supplied", function() {
     var that = setup(this), googPrice = this.googPrice;
 
