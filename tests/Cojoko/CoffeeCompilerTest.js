@@ -12,31 +12,31 @@ define(['qunit-assert', 'test-setup', 'Cojoko/Class'], function(t, testSetup, Co
   test("parses preambel into code", function () {
     var that = setup(this);
 
-    var js = that.compiler.compile(new CojokoClass('SimpleClass', {}));
+    var compiled = that.compiler.compile(new CojokoClass('SimpleClass', {}));
 
-    this.assertContains("__extends = function", js);
+    this.assertContains("__extends = function", compiled.js);
   });
 
   test("creates named constructor for Class", function () {
     var that = setup(this);
 
-    var js = that.compiler.compile(new CojokoClass('SimpleClass', {}));
+    var compiled = that.compiler.compile(new CojokoClass('SimpleClass', {}));
 
-    this.assertContains("function SimpleClass(props) {", js);
-    this.assertContains("return SimpleClass;", js);
+    this.assertContains("function SimpleClass(props) {", compiled.js);
+    this.assertContains("return SimpleClass;", compiled.js);
   });
 
   test("creates all methods as prototype methods", function () {
     var that = setup(this);
 
-    var js = that.compiler.compile(new CojokoClass('SimpleClass', {
+    var compiled = that.compiler.compile(new CojokoClass('SimpleClass', {
       methods: {
         doSomething: function () {},
         doOther: function () {}
       }
     }));
 
-    this.assertContains("SimpleClass.prototype.doSomething = function ()", js);
-    this.assertContains("SimpleClass.prototype.doOther = function ()", js);
+    this.assertContains("SimpleClass.prototype.doSomething = function ()", compiled.js);
+    this.assertContains("SimpleClass.prototype.doOther = function ()", compiled.js);
   });
 });
