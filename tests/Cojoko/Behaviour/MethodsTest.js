@@ -1,12 +1,9 @@
-/*globals ACME:true */
 define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) {
   
   module("Cojoko.Behaviour.Methods");
 
   var setup = function (test) {
-    var googPrice = null;
-
-    return t.setup(test, {googPrice: googPrice});
+    return t.setup(test, {});
   };
 
   test("when properties are defined in root of class spec they are treated as methods", function () {
