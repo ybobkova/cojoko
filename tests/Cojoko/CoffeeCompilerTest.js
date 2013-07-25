@@ -22,7 +22,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko/Class'], function(t, testSetup, Co
 
     var js = that.compiler.compile(new CojokoClass('SimpleClass', {}));
 
-    this.assertContains("function SimpleClass() {", js);
+    this.assertContains("function SimpleClass(props) {", js);
     this.assertContains("return SimpleClass;", js);
   });
 

@@ -1,4 +1,4 @@
-define(['qunit-assert', 'test-setup', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js','test-files/Joose/HTTPMessage'], function(t, testSetup, HTTPMessageCojokoCode) {
+define(['qunit-assert', 'test-setup', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js','test-files/Joose/HTTPMessage'], function(t, testSetup, Cojoko, HTTPMessageCojokoCode) {
   
   module("Cojoko.Writer");
 
@@ -24,9 +24,4 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'text!test-files/Cojoko/HTTPMess
     );
   });
 
-  test("writes a class with extending", function() {
-    var that = setup(this);
-
-    Cojoko.Class('');
-  });
 });

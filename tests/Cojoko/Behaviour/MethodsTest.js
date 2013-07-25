@@ -9,6 +9,29 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     return t.setup(test, {googPrice: googPrice});
   };
 
+  test("when properties are defined in root of class spec they are treated as methods", function () {
+    var that = setup(this);
+
+    try {
+      Cojoko.Class('ErrorWithPropertyInRoot', {
+
+        lastName: {'is': 'rw', 'required': true},
+
+        init: function (props) {
+
+        }
+      });
+
+      this.fail('exception is not caught');
+    } catch (Ex) {
+      var message = Ex.toString();
+
+      this.ok('exception is caught with message '+message);
+      this.assertContains('Wrap your properties with properties: {', message);
+    }
+
+  });
+
   test("setters can be overriden", function () {
     var that = setup(this);
 
