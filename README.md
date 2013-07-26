@@ -1,7 +1,6 @@
-# Cojoko
+# Cojoko [![Build Status](https://travis-ci.org/pscheit/cojoko.png?branch=master)](https://travis-ci.org/pscheit/cojoko)
 
-Cojoko stands for **Co**mpiling **Jo**ose with **K**nock **o**ut.  
-It's an compiled advanced meta object system (Joose) for javascript which supports the generation of view models for [Knockout](http://knockoutjs.com).
+It's an compiled advanced meta object system (inspired by Joose) for javascript which supports the generation of view models for [Knockout](http://knockoutjs.com).
 
 ## Introduction
 
