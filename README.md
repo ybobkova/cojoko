@@ -38,7 +38,7 @@ define('cojoko', './Person', './Identifyable', function (Cojoko, Person, Identif
     mixins: [Identifyable],
     
     properties: {
-      email: { is : 'rw', required: true }
+      email: { is : 'gs', required: true }
     },
     
     methods: {
