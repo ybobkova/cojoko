@@ -1,4 +1,4 @@
-/*globals Test: true */
+/*globals Test: true, requirejs: true */
 define(['require',
   'qunit-assert', 'test-setup', 'lodash', 'joose'
   ], function(require, t, testSetup, _, Joose) {

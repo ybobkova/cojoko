@@ -11,7 +11,7 @@ define(['joose'], function(Joose) {
     
     my: {
       has: {
-        widgetInitializer: { is: 'rw', required: false, isPrivate: false, init: function () { return {} } }
+        widgetInitializer: { is: 'rw', required: false, isPrivate: false, init: function () { return {}; } }
       },
       
       methods: {

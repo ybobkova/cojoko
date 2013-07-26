@@ -6,8 +6,8 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     var Animal = Cojoko.Class('Animal', {
 
       properties: {
-        name: {'is': 'g', 'required': true},
-        distanceMoved: {'is': 'g', 'required': true, init: 0}
+        name: {'is': 'g', required: true},
+        distanceMoved: {'is': 'g', required: false, init: 0}
       },
       
       methods: {
@@ -26,7 +26,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
       'extends': Animal,
 
       properties: {
-        noxious: {'is': 'rw', 'required': true, init: false}
+        noxious: {'is': 'rw', required: false, init: false}
       },
 
       methods: {

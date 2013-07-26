@@ -34,7 +34,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
 
     var o = new (Cojoko.Class({
       properties: {
-        value: { is : 'gs', required: true, isPrivate: true }
+        value: { is : 'gs', required: false, isPrivate: true }
       },
 
       methods: {
@@ -54,7 +54,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
 
     var o = new (Cojoko.Class({
       properties: {
-        value: { is : 'gs', required: true, isPrivate: true }
+        value: { is : 'gs', required: false, isPrivate: true }
       },
 
       methods: {

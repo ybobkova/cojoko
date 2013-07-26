@@ -116,7 +116,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
 
     var ArrayValueClass = Cojoko.Class('ArrayValueClass', {
       properties: {
-        value: { is: 'gs', required: true, isPrivate: true, init: [] }
+        value: { is: 'gs', required: false, isPrivate: true, init: [] }
       }
     });
 
@@ -137,7 +137,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
 
     var ObjectValueClass = Cojoko.Class('ObjectValueClass', {
       properties: {
-        value: { is: 'gs', required: true, isPrivate: true, init: {} }
+        value: { is: 'gs', required: false, isPrivate: true, init: {} }
       }
     });
 
@@ -161,7 +161,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
       that.fail('no Exception was thrown, allthough value is missing');
     } catch (Ex) {
       that.ok('exception cought with: '+Ex.toString());
-      that.assertContains('missing property value');
+      that.assertContains("Missing property 'value'", Ex.toString());
     }
   });
 
@@ -184,45 +184,5 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
     that.assertEquals(2, googPrice.getDecimals());
     googPrice.setDecimals(4);
     that.assertEquals(4, googPrice.getDecimals());
-  });
-
-  test("setters can be overriden", function () {
-    var that = setup(this);
-
-    var o = new (Cojoko.Class({
-      properties: {
-        value: { is : 'gs', required: true, isPrivate: true }
-      },
-
-      methods: {
-        setValue: function () {
-          this.value = 'overidden';
-        }
-      }
-    }))();
-
-    o.setValue(false);
-    this.assertEquals('overidden', o.getValue(), 'value setter is overidden');
-
-  });
-
-
-  test("getters can be overriden", function () {
-    var that = setup(this);
-
-    var o = new (Cojoko.Class({
-      properties: {
-        value: { is : 'gs', required: true, isPrivate: true }
-      },
-
-      methods: {
-        getValue: function () {
-          return 'overidden';
-        }
-      }
-    }))();
-
-    o.setValue(false);
-    this.assertEquals('overidden', o.getValue(), 'value getter is overidden');
   });
 });
