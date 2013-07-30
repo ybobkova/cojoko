@@ -64,6 +64,15 @@ define([
       }
     });
 
+    Joose.Class('Test.InitObject', {
+
+      has: {
+        objectProperty: {is:'w', init: Joose.I.Object},
+        arrayProperty: {is:'rw', init: Joose.I.Array}
+      }
+
+    });
+
   var setup = function (test) {
     var reader = testSetup.container.getJooseReader();
 
@@ -185,7 +194,6 @@ define([
   test("this.$$ references will be translated", function () {
     var that = setup(this), cojokoClass;
 
-
     that.assertCojoko(cojokoClass = this.reader.read(Test.Travelroute))
       .name('Test.Travelroute')
       .method('hasValidLength');
@@ -194,5 +202,14 @@ define([
 
     this.assertContains('this.length', hasValidLength.toString());
     this.assertContains('that.unit', hasValidLength.toString());
+  });
+
+  test("property inits will be translated", function () {
+    var that = setup(this), cojokoClass;
+
+    that.assertCojoko(cojokoClass = this.reader.read(Test.InitObject))
+      .property('objectProperty').hasInit({}).end()
+      .property('arrayProperty').hasInit([]).end()
+    ;
   });
 });
