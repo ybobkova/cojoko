@@ -48,6 +48,22 @@ define([
       }
     });
 
+    Joose.Class('Test.Travelroute', {
+
+      has: {
+        length: {is:'w', init: 17},
+        unit: {is:'rw', init: 'm'}
+      },
+
+      methods: {
+        hasValidLength: function () {
+          var that = this;
+
+          return this.$$length > 0 && that.$$unit !== undefined;
+        }
+      }
+    });
+
   var setup = function (test) {
     var reader = testSetup.container.getJooseReader();
 
@@ -103,7 +119,7 @@ define([
 
     that.assertCojoko(this.reader.read(Psc.EventDispatching))
       .name('Psc.EventDispatching')
-      //.isMixin()
+      .isMixin()
       .method('init').end()
       .method('toString').end()
       .property('eventManager').end()
@@ -164,5 +180,19 @@ define([
       .method('init').end()
     ;
 
+  });
+
+  test("this.$$ references will be translated", function () {
+    var that = setup(this), cojokoClass;
+
+
+    that.assertCojoko(cojokoClass = this.reader.read(Test.Travelroute))
+      .name('Test.Travelroute')
+      .method('hasValidLength');
+
+    var hasValidLength = cojokoClass.reflection.getMethod('hasValidLength');
+
+    this.assertContains('this.length', hasValidLength.toString());
+    this.assertContains('that.unit', hasValidLength.toString());
   });
 });

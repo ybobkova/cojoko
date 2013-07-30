@@ -195,11 +195,13 @@ define(['require',
           cojoko = that.reader.read(jooseClass);
 
           that.assertCojoko(cojoko)
-          .name(className)
+           .name(className)
           ;
+
+          _.forEach(cojoko.reflection.getMethods(), function(method, name) {
+            that.assertContainsNot('$$', method.toString(), 'method '+name+' in '+className+' contains still a $$');
+          });
         });
-
-
       });
     });
   });

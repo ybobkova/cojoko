@@ -1,7 +1,8 @@
-define(['Cojoko/Container', 'Test/CojokoAsserter'], function (Container, CojokoAsserter) {
+define(['Cojoko', 'Test/CojokoAsserter'], function (Cojoko, CojokoAsserter) {
 
   return {
-    container: new Container(),
+    Cojoko: Cojoko,
+    container: Cojoko.getContainer(),
     extend: function (test) {
       var asserter = new CojokoAsserter(test);
 
