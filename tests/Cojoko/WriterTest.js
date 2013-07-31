@@ -1,10 +1,11 @@
+/*jshint evil:true*/
 define([
-    'qunit-assert', 'test-setup', 'jquery', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
+    'qunit-assert', 'test-setup', 'jquery', 'lodash', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
     'test-files/Cojoko/Eagle', 'test-files/Cojoko/Wolpertinger',
     'test-files/Joose/HTTPMessage', 'ast-types'
   ], 
   function(
-    t, testSetup, $, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
+    t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
     EagleClass, WolpertingerClass
   ) {
   
