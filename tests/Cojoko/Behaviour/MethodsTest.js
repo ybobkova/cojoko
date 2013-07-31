@@ -10,7 +10,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     var that = setup(this);
 
     try {
-      Cojoko.Class('ErrorWithPropertyInRoot', {
+      Cojoko.RuntimeClass('ErrorWithPropertyInRoot', {
 
         lastName: {'is': 'rw', 'required': true},
 
@@ -32,7 +32,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
   test("setters can be overriden", function () {
     var that = setup(this);
 
-    var o = new (Cojoko.Class({
+    var o = new (Cojoko.RuntimeClass({
       properties: {
         value: { is : 'gs', required: false, isPrivate: true }
       },
@@ -52,7 +52,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
   test("getters can be overriden", function () {
     var that = setup(this);
 
-    var o = new (Cojoko.Class({
+    var o = new (Cojoko.RuntimeClass({
       properties: {
         value: { is : 'gs', required: false, isPrivate: true }
       },

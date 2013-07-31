@@ -2,7 +2,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
   
   module("Cojoko.Behaviour.Properties");
 
-  var Price = Cojoko.Class('TestPrice', {
+  var Price = Cojoko.RuntimeClass('TestPrice', {
   
     properties: {
       value: { is : 'g', required: true, isPrivate: true },
@@ -68,7 +68,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
     var that = setup(this);
 
     // please note: that is not defined in init from test ! Because its recompiled from Cojoko and evaluated in other scope
-    var Person = Cojoko.Class('TestPerson1', {
+    var Person = Cojoko.RuntimeClass('TestPerson1', {
       properties: {
         name: { is: 'gw', required: false, init: 'P', type: "String" },
         lastName: { is: 'gw', required: false, init: 'Sc', type: "String" }
@@ -114,7 +114,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
   test("init value array", function() {
     var that = setup(this);
 
-    var ArrayValueClass = Cojoko.Class('ArrayValueClass', {
+    var ArrayValueClass = Cojoko.RuntimeClass('ArrayValueClass', {
       properties: {
         value: { is: 'gs', required: false, isPrivate: true, init: [] }
       }
@@ -135,7 +135,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko', 'lodash'], function(t, testSetup
   test("init value object", function() {
     var that = setup(this);
 
-    var ObjectValueClass = Cojoko.Class('ObjectValueClass', {
+    var ObjectValueClass = Cojoko.RuntimeClass('ObjectValueClass', {
       properties: {
         value: { is: 'gs', required: false, isPrivate: true, init: {} }
       }

@@ -1,12 +1,11 @@
 # Init values of properties
 
-In Cojoko a property can have an init value. It is given as the "init" key of the property specification. If init is left out `undefined` is used.
-
+A property in Cojoko can have an init value. It is given as the "init" key of the property specification. If init is left out `undefined` is used as default.
 
 Lets have a look at properties definition in cojoko with init for properties:
 
 ```javascript
-    has: {
+    properties: {
       num: { is : 'gs', required: true, init: 200, type: "Integer" },
       flag: { is : 'gs', required: false, type: "Boolean", init: false },
   
@@ -22,7 +21,9 @@ If Cojoko would not clone these structures they would be common for all instance
 (init-object-properties.example)
 ```javascript
   var Person = Cojoko.Class({
-    names: { is: 'gw', required: false, init: [], type: "Array" },
+    properties: {
+      names: { is: 'gw', required: false, init: [], type: "Array" }
+    },
 
     methods: {
       addNamePart: function (part) {
@@ -50,8 +51,10 @@ every CojokoClass can have one init() function for initializing the state of the
 
 ```javascript
   var Person = Cojoko.Class({
-    name: { is: 'gw', required: false, init: 'P', type: "String" },
-    lastName: { is: 'gw', required: false, init: 'Sc', type: "String" },
+    properties: {
+      name: { is: 'gw', required: false, init: 'P', type: "String" },
+      lastName: { is: 'gw', required: false, init: 'Sc', type: "String" }
+    },
 
     methods: {
       init: function (props) {
@@ -63,6 +66,5 @@ every CojokoClass can have one init() function for initializing the state of the
         // when props.lastName is !== undefined as 'foo' this.lastName is 'foo'
       }
     }
-
   });
 ```

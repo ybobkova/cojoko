@@ -3,7 +3,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
   module("Cojoko.Behaviour.Inheritance");
 
   var setup = function (test) {
-    var Animal = Cojoko.Class('Animal', {
+    var Animal = Cojoko.RuntimeClass('Animal', {
 
       properties: {
         name: {'is': 'g', required: true},
@@ -22,7 +22,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
       }
     });
 
-    var Snake = Cojoko.Class('Snake', {
+    var Snake = Cojoko.RuntimeClass('Snake', {
       'extends': Animal,
 
       properties: {
@@ -41,7 +41,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     });
 
 
-    var Horse = Cojoko.Class('Horse', {
+    var Horse = Cojoko.RuntimeClass('Horse', {
       'extends': Animal
     });
 
