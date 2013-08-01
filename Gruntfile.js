@@ -49,9 +49,7 @@ module.exports = function(grunt) {
           $: true,
           define: true, require: true,
 
-          Psc: true,
-          tiptoi: true,
-          CoMun: true,
+          Test: true, Psc: true,
           QUnit: true, module: true, stop: true, start: true, ok: true, asyncTest: true, test: true, expect: true
         }
       }
