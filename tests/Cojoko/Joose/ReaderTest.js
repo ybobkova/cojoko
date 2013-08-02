@@ -7,26 +7,16 @@ define([
   'text!test-files/Joose/Test/Citizen.js', 
   'text!test-files/Joose/Test/Travelroute.js',
   'text!test-files/Joose/Test/InitObject.js',
-  'text!test-files/Joose/Response.js', 
-  'text!test-files/Joose/HTTPMessage.js',
-  'text!test-files/Joose/EventDispatching.js', 
-  'text!test-files/Joose/WidgetWrapper.js',
-  'text!test-files/Joose/DropBox.js',
-  'text!test-files/Joose/Test/JooseClassWithNoIsProperty.js'
-  ], function(require, t, testSetup, esprima, JSON, _, Joose, debug,
-    TestFlying,
-    TestSwimming,
-    TestTraveling,
-    TestCitizen,
-    TestTravelroute,
-    TestInitObject,
-    PscResponse,
-    PscHTTPMessage,
-    PscEventDispatching,
-    PscWidgetWrapper,
-    PscUIDropBox,
-    TestJooseClassWithNoIsProperty
-  ) {
+  'text!test-files/Joose/Test/JooseClassWithNoIsProperty.js',
+  'text!test-files/Joose/Psc/CMS/TabButtonable.js',
+  'text!test-files/Joose/Psc/CMS/Buttonable.js',
+  'text!test-files/Joose/Psc/CMS/TabOpenable.js',
+  'text!test-files/Joose/Psc/Response.js', 
+  'text!test-files/Joose/Psc/HTTPMessage.js',
+  'text!test-files/Joose/Psc/EventDispatching.js', 
+  'text!test-files/Joose/Psc/UI/WidgetWrapper.js',
+  'text!test-files/Joose/Psc/UI/DropBox.js'
+  ], function(require, t, testSetup, esprima, JSON, _, Joose, debug) {
   
   module("Cojoko.Joose.Reader");
 
@@ -35,26 +25,8 @@ define([
 
     testSetup.extend(test);
 
-    var sources = {
-      'Test.Flying': TestFlying,
-      'Test.Swimming': TestSwimming,
-      'Test.Traveling': TestTraveling,
-      'Test.Citizen': TestCitizen,
-      'Test.Travelroute': TestTravelroute,
-      'Test.InitObject': TestInitObject,
-      'Psc.Response': PscResponse,
-      'Psc.HTTPMessage': PscHTTPMessage,
-      'Psc.EventDispatching': PscEventDispatching,
-      'Psc.WidgetWrapper': PscWidgetWrapper,
-      'Psc.UI.DropBox': PscUIDropBox,
-      'Test.JooseClassWithNoIsProperty': TestJooseClassWithNoIsProperty
-    };
-
     var readClassCode = function(fqn) {
-      if (!sources[fqn]) {
-        throw new Error('have no sources for: '+fqn);
-      }
-      return sources[fqn];
+      return require('text!test-files/Joose/'+fqn.replace(/\./g, '/')+'.js');
     };
 
     var read = function (code) {
@@ -127,6 +99,18 @@ define([
 
   });
 
+  test("reads a class with a static interface (really?)", function () {
+    expect(0);
+    return;
+    var that = setup(this);
+
+    that.assertCojoko(this.read('Psc.UI.WidgetWrapper'))
+      .name('Psc.UI.WidgetWrapper')
+      .staticMethod('unwrapWidget').end()
+    ;
+
+  });
+
   test("reads a class with a role", function () {
     var that = setup(this);
 
@@ -137,6 +121,16 @@ define([
       .hasMixin('Psc.EventDispatching')
     ;
 
+  });
+
+  test("reads a class with more roles", function () {
+    var that = setup(this);
+
+    that.assertCojoko(this.read('Psc.CMS.TabButtonable'))
+      .name('Psc.CMS.TabButtonable')
+      .hasMixin('Psc.CMS.Buttonable')
+      .hasMixin('Psc.CMS.TabOpenable')
+    ;
   });
 
   test("reads only the roles of the citizen class not the Roles of the hierarchy", function () {
@@ -179,8 +173,8 @@ define([
 
     var hasValidLength = cojokoClass.reflection.getMethod('hasValidLength');
 
-    this.assertContains('this.length', hasValidLength.toString());
-    this.assertContains('that.unit', hasValidLength.toString());
+    this.assertContains('this.length', hasValidLength.getBodyAsString());
+    this.assertContains('that.unit', hasValidLength.getBodyAsString());
   });
 
   test("property inits will be translated", function () {
