@@ -101,14 +101,14 @@ define([
 
   test("reads a class with a static interface (really?)", function () {
     expect(0);
-    return;
+    /*
     var that = setup(this);
 
     that.assertCojoko(this.read('Psc.UI.WidgetWrapper'))
       .name('Psc.UI.WidgetWrapper')
       .staticMethod('unwrapWidget').end()
     ;
-
+    */
   });
 
   test("reads a class with a role", function () {
