@@ -2,11 +2,11 @@
 define([
     'qunit-assert', 'test-setup', 'jquery', 'lodash', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
     'test-files/Cojoko/Eagle', 'test-files/Cojoko/Wolpertinger',
-    'test-files/Joose/HTTPMessage', 'ast-types'
+    'text!test-files/Joose/Psc/HTTPMessage.js', 'ast-types'
   ], 
   function(
     t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
-    EagleClass, WolpertingerClass
+    EagleClass, WolpertingerClass, HTTPMessageJooseCode
   ) {
   
   module("Cojoko.Writer");
@@ -16,6 +16,8 @@ define([
     var jooseReader = testSetup.container.getJooseReader();
 
     testSetup.extend(test);
+
+    var classCodeReader = testSetup.container.getClassCodeReader();
 
     var parseDefine = function (code) {
       var findReturn = true;
@@ -47,13 +49,17 @@ define([
       return d.promise();
     };
     
-    return t.setup(test, { writer: writer, jooseReader: jooseReader, parseDefine: parseDefine, evalWritten: evalWritten });
+    return t.setup(test, { writer: writer, jooseReader: jooseReader, classCodeReader: classCodeReader, parseDefine: parseDefine, evalWritten: evalWritten });
   };
   
   test("acceptance: the writer returns a CojokoClass as CojokoCode", function() {
     var that = setup(this);
 
-    var httpMessage = this.jooseReader.read(Psc.HTTPMessage);
+    that.classCodeReader.getClassCode = function (fqn) {
+      return HTTPMessageJooseCode;
+    };
+
+    var httpMessage = this.jooseReader.read('Psc.HTTPMessage', that.classCodeReader);
 
     var eolVisible = function (code) {
       return code.replace(/\n/g, "\n-n-").replace(/ /g, ".");

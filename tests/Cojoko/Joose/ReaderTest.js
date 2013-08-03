@@ -25,13 +25,17 @@ define([
 
     testSetup.extend(test);
 
-    var readClassCode = function(fqn) {
-      return require('text!test-files/Joose/'+fqn.replace(/\./g, '/')+'.js');
-    };
+    var classCodeReader = _.extend(
+      testSetup.container.getClassCodeReader(), {
+        getClassCode: function (fqn) {
+          return require('text!test-files/Joose/'+fqn.replace(/\./g, '/')+'.js');
+        }
+      }
+    );
 
     var read = function (code) {
       try {
-        return test.reader.read(code, readClassCode);
+        return test.reader.read(code, classCodeReader);
       } catch (Ex) {
         if (Ex.isParseError) {
           debug('Parse Error caught for class', Ex.fqn, 'in node', Ex.node);

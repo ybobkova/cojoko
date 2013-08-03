@@ -1,13 +1,13 @@
 /*globals Test: true */
 define([
-  'qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash', 'joose', 
-  'test-files/Joose/Response', 
-  'test-files/Joose/EventDispatching', 
-  'test-files/Joose/WidgetWrapper',
-  'test-files/Joose/DropBox'
-  ], function(t, testSetup, esprima, JSON, _, Joose) {
+  'qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash', 'joose', 'Cojoko/Joose/RuntimeReader',
+  'test-files/Joose/Psc/Response', 
+  'test-files/Joose/Psc/EventDispatching', 
+  'test-files/Joose/Psc/UI/WidgetWrapper',
+  'test-files/Joose/Psc/UI/DropBox'
+  ], function(t, testSetup, esprima, JSON, _, Joose, JooseRuntimeReader) {
   
-  module("Cojoko.JooseClassReader");
+  module("Cojoko.Joose.RuntimeReader");
 
     Joose.Role('Test.Flying', {
       after: {
@@ -74,7 +74,7 @@ define([
     });
 
   var setup = function (test) {
-    var reader = testSetup.container.getJooseReader();
+    var reader = new JooseRuntimeReader(testSetup.container.Cojoko);
 
     testSetup.extend(test);
 
@@ -200,8 +200,8 @@ define([
 
     var hasValidLength = cojokoClass.reflection.getMethod('hasValidLength');
 
-    this.assertContains('this.length', hasValidLength.toString());
-    this.assertContains('that.unit', hasValidLength.toString());
+    this.assertContains('this.length', hasValidLength.getBodyAsString());
+    this.assertContains('that.unit', hasValidLength.getBodyAsString());
   });
 
   test("property inits will be translated", function () {
