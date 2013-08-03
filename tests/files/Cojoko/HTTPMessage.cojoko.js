@@ -21,10 +21,10 @@ define(['Cojoko'], function (Cojoko) {
 
       parseHeader: function (headers) {
         // copy von jquery
-        var m, rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/mg; // IE leaves an \r character at EOL
+        var m, rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm; // IE leaves an \r character at EOL
         this.setHeader({});
   
-        while((m = rheaders.exec(headers))) {
+        while (m = rheaders.exec(headers)) {
           this.setHeaderField(m[1], m[2]);
         }
 

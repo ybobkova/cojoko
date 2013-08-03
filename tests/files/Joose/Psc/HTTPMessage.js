@@ -6,25 +6,25 @@ define(['joose'], function (Joose) {
     },
 
     methods: {
-      setHeaderField: function(key, value) {
+      setHeaderField: function (key, value) {
         this.getHeader()[ key ] = value;
         return this;
       },
 
-      getHeaderField: function(key) {
+      getHeaderField: function (key) {
         return this.getHeader()[key] || null;
       },
 
-      removeHeaderField: function(key) {
+      removeHeaderField: function (key) {
         delete this.getHeader()[key];
       },
 
       parseHeader: function (headers) {
         // copy von jquery
-        var m, rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/mg; // IE leaves an \r character at EOL
+        var m, rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm; // IE leaves an \r character at EOL
         this.setHeader({});
   
-        while((m = rheaders.exec(headers))) {
+        while (m = rheaders.exec(headers)) {
           this.setHeaderField(m[1], m[2]);
         }
 
