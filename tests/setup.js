@@ -1,4 +1,4 @@
-define(['Cojoko', 'Test/CojokoAsserter'], function (Cojoko, CojokoAsserter) {
+define(['Cojoko', 'Test/CojokoAsserter', 'lodash'], function (Cojoko, CojokoAsserter, _) {
 
   return {
     Cojoko: Cojoko,
@@ -7,6 +7,16 @@ define(['Cojoko', 'Test/CojokoAsserter'], function (Cojoko, CojokoAsserter) {
       var asserter = new CojokoAsserter(test);
 
       test.assertCojoko = asserter.assertCojoko;
+    },
+
+    getTestClassCodeReader: function() {
+      return _.extend(
+        this.container.getClassCodeReader(), {
+          getClassCode: function (fqn) {
+            return require('text!test-files/Joose/'+fqn.replace(/\./g, '/')+'.js');
+          }
+        }
+      );
     }
   };
 });

@@ -92,4 +92,28 @@ define(['qunit-assert', 'test-setup', 'AMD/Definition', 'AMD/Dependency'], funct
       this.assertContains("already used", err.toString());
     }
   });
+
+  test("by default the module definition is anonymous", function () {
+    var that = setup(this);
+
+    this.assertTrue(that.amd.isAnonymous(), 'amd is anonymous per default');
+  });
+
+  test("when name is given as parameter 1 the module is not anonymous", function () {
+    var that = setup(this);
+
+    var amd = new AMDClass('Some/ModuleId');
+
+    that.assertEquals('Some/ModuleId', amd.getName());
+    this.assertFalse(amd.isAnonymous(), 'amd is not anonymous');
+  });
+
+  test("when name is set the module definition is not anonymous anymore", function () {
+    var that = setup(this);
+
+    that.amd.setName('Some/ModuleId');
+
+    that.assertEquals('Some/ModuleId', that.amd.getName());
+    this.assertFalse(that.amd.isAnonymous(), 'amd is not anonymous');
+  });
 });

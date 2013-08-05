@@ -1,0 +1,30 @@
+ich bin in writer/reader.js
+die dependencies müssen vom reader ausgelesen werden
+dabei weiß ich nicht genau wo die dependencies gespeichert werden aka: "irgendwo in der class". ist klar.
+Die CojokoClass soll eigentlich nichts vom AM-Module wissen dass soll der Writer machen.
+Die Cojoko/Class muss eigentlich nur zurückgeben: die impliciten Dependencies (die Klassen reichen dafür)
+
+CojokoClass.getImplicitClasses()
+CojokoClass.getExplicitClasses()
+
+wo kommt das hier hin?
+CojokoClass.getVendorDependencies();
+
+schon in die Klasse, weil es die Methoden in der Klasse brauchen.
+Aber irgendwie auc nicht weil:
+
+Cojoko.Class({}...)
+erzeugt ja auch eine Valide Klassse, die hat jedoch keine Dependencies.
+Doch sie hat doch Dependencies, aber diese sind da "eingeclosured"
+
+var jQuery = {};
+
+Cojoko.RuntimeClass('So gehts kaputt', {
+
+  methods: {
+    soGehtAllesKaputt: function() {
+      // jQuery is not defined here
+    }
+  }
+
+});

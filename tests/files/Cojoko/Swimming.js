@@ -1,4 +1,4 @@
-define(['Cojoko'],function (Cojoko) {
+define(['Cojoko', 'lodash'],function (Cojoko, _) {
   return Cojoko.Mixin('Swimming', {
     swim: function(meters) {
       return this.move(meters)+' In water (because its swimming).';

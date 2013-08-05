@@ -1,14 +1,15 @@
-define(['joose'], function (Joose) {
-    Joose.Role('Test.Swimming', {
-      before: {
-        initialize: function () {
-          // prepare rubber-duck
-        }
-      },
+define(['joose', 'lodash'], function (Joose, _) {
+  Joose.Role('Test.Swimming', {
 
-      methods: {
-        swim: function () {}
+    before: {
+      initialize: function () {
+        // prepare rubber-duck
       }
-    });
+    },
 
+    methods: {
+      swim: function () {}
+    }
+
+  });
 });

@@ -8,6 +8,7 @@ define([
   'text!test-files/Joose/Test/Travelroute.js',
   'text!test-files/Joose/Test/InitObject.js',
   'text!test-files/Joose/Test/JooseClassWithNoIsProperty.js',
+  'text!test-files/Joose/Psc/Date.js',
   'text!test-files/Joose/Psc/CMS/TabButtonable.js',
   'text!test-files/Joose/Psc/CMS/Buttonable.js',
   'text!test-files/Joose/Psc/CMS/TabOpenable.js',
@@ -25,13 +26,7 @@ define([
 
     testSetup.extend(test);
 
-    var classCodeReader = _.extend(
-      testSetup.container.getClassCodeReader(), {
-        getClassCode: function (fqn) {
-          return require('text!test-files/Joose/'+fqn.replace(/\./g, '/')+'.js');
-        }
-      }
-    );
+    var classCodeReader = testSetup.getTestClassCodeReader();
 
     var read = function (code) {
       try {
@@ -168,7 +163,7 @@ define([
 
   });
 
-  test("this.$$ references will be translated", function () {
+  test("this.$$ references will be translated in methods", function () {
     var that = setup(this), cojokoClass;
 
     that.assertCojoko(cojokoClass = this.read('Test.Travelroute'))
@@ -188,5 +183,76 @@ define([
       .property('objectProperty').hasInit({}).end()
       .property('arrayProperty').hasInit([]).end()
     ;
+  });
+
+  test("other dependencies from joose class will be read", function () {
+    var that = setup(this);
+
+    that.assertCojoko(this.read('Test.Swimming'))
+      .hasDependency({ path: 'lodash', alias: '_', type: 'vendor'})
+      .hasNotDependency('Joose')
+    ;
+  });
+
+  test("dependencies that are subclasses will be ignored but used dependencies or other class dependencies will be added", function () {
+    var that = setup(this);
+
+    //define(['joose', 'jquery', 'Psc/UI/WidgetWrapper', 'Psc/EventDispatching', 'Psc/Code'], function(Joose, $) {
+    that.assertCojoko(this.read('Psc.UI.DropBox'))
+      .hasNotDependency('Joose')
+      .hasDependency({ path: 'jquery', alias: '$', type: 'vendor'})
+
+      // dependency that has no param alias
+      .hasDependency({path: 'jquery-ui', type: 'vendor'})
+      
+      // dependenciy that is subClass
+      .hasDependency({path: 'Psc/UI/WidgetWrapper', type: 'implicit'}) // extends
+      .hasDependency({path: 'Psc/EventDispatching', type: 'implicit'}) // mixin
+
+      // real class dependency (will be hooked at define level as a global-look-alike)
+      .hasDependency({path: 'Psc/Code', alias: 'Psc.Code', type: 'explicit'})
+      .hasDependency({path: 'Psc/Exception', alias: 'Psc.Exception', type: 'explicit'})
+    ;
+
+    /* will be converted (with cojoko to something like):
+      define(['require', 'Cojoko', 'jquery', 'Psc/UI/WidgetWrapper', 'Psc/EventDispatching', 'Psc/Code'], function(require, Cojoko, $) {
+      
+      var Psc = {
+        UI: {
+           WidgetWrapper: require('Psc/UI/WidgetWrapper')
+        },
+        EventDispatching: require('Psc/EventDispatching')
+      };
+
+      return Cojoko.Class('Psc.UI.DropBox', {
+         ...
+      })
+
+
+      for that to happen we need:
+
+      1. the reader needs to parse the dependencies and needs to categorize them into:
+
+        mixins/extends dependencies 
+          they are treatet by cojoko and need no special progressing
+          .type = 'class.cojoko.implicit'
+
+        vendor/library dependencies 
+          these are dependencies that might have an alias or not (jquery plugins have no alias)
+          they have to be written from the writer into async module definition of the file
+          .type = 'vendor'
+
+        class dependencies 
+          those need special treatments because they are used in the code like:
+            new Namespaced.Class.Dependency()
+          and those names cannot be created with define(): 
+          define('Namespaced/Class/Dependency', function (Namespaced.Class.Dependency))
+          will not work.
+
+          for that we need to hack in the Psc = { ... } hook. This is the Cojoko Writers work
+          those classes are detected with an alias with a . inside
+
+          .type = 'class.cojoko.explicit'
+    */
   });
 });
