@@ -2,11 +2,11 @@
 define([
     'qunit-assert', 'test-setup', 'jquery', 'lodash', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
     'test-files/Cojoko/Eagle', 'test-files/Cojoko/Wolpertinger',
-    'text!test-files/Joose/Psc/HTTPMessage.js', 'ast-types'
+    'text!test-files/Joose/Psc/HTTPMessage.js', 'test-files/Cojoko/AllInitValues'
   ], 
   function(
     t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
-    EagleClass, WolpertingerClass, HTTPMessageJooseCode
+    EagleClass, WolpertingerClass, HTTPMessageJooseCode, AllInitValuesClass
   ) {
   
   module("Cojoko.Writer");
@@ -87,6 +87,14 @@ define([
     var wrapper = that.parseDefine(js);
 
     this.assertNotEquals(null, wrapper.returns, 'wrapper should have a first level return for the class');
+  });
+
+  test("writes all init values", function () {
+    var that = setup(this);
+
+    var js = this.writer.write(AllInitValuesClass);
+
+    this.assertNotUndefined(js);
   });
 
   asyncTest("writes class with one mixin", function () {
