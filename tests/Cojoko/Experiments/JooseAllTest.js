@@ -148,7 +148,7 @@ define(['require',
     
     var requirePsc = requirejs.config({
       context: "psc-cms-js",
-      baseUrl: "/psc-cms-js/lib",
+      baseUrl: "/psc-cms-js/lib"
     });
 
     var classCodeReader = testSetup.container.getClassCodeReader();
