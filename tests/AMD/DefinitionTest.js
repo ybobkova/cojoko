@@ -116,4 +116,5 @@ define(['qunit-assert', 'test-setup', 'AMD/Definition', 'AMD/Dependency'], funct
     that.assertEquals('Some/ModuleId', that.amd.getName());
     this.assertFalse(that.amd.isAnonymous(), 'amd is not anonymous');
   });
+
 });

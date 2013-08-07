@@ -1,13 +1,18 @@
 /*jshint evil:true*/
 define([
-    'qunit-assert', 'test-setup', 'jquery', 'lodash', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
+    'require', 'qunit-assert', 'test-setup', 'jquery', 'lodash', 'Cojoko', 'text!test-files/Cojoko/HTTPMessage.cojoko.js', 'Test/GetWrapper', 'escodegen',
     'test-files/Cojoko/Eagle', 'test-files/Cojoko/Wolpertinger',
     'text!test-files/Joose/Psc/HTTPMessage.js',
     'test-files/Cojoko/AllInitValues',
-    'text!test-files/Joose/Psc/UI/DropBox.js'
+    'text!test-files/Joose/Psc/UI/DropBox.js',
+    'text!test-files/Joose/Psc/UI/WidgetWrapper.js',
+    'text!test-files/Joose/Psc/EventDispatching.js',
+    'text!test-files/Joose/Psc/Code.js',
+    'text!test-files/Joose/Psc/WrongValueException.js',
+    'text!test-files/Joose/Psc/Exception.js'
   ],
   function(
-    t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
+    require, t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
     EagleClass, WolpertingerClass, HTTPMessageJooseCode, AllInitValuesClass
   ) {
 
@@ -112,7 +117,7 @@ define([
           .name('Eagle')
           .hasMixin('Flying');
 
-        that.assertTrue(_(wrapper.params).contains('Flying'));
+        that.assertTrue(_(wrapper.params).contains('Flying'), 'Flying is in define wrapper');
       });
     });
 
@@ -153,21 +158,27 @@ define([
 
       var DropBoxClass = this.jooseReader.read('Psc.UI.DropBox', that.classCodeReader);
 
-      that.evalWritten(EagleClass).done(function(writtenClass, wrapper) {
+      define('test-files/Cojoko/Psc/EventDispatching', function () { return Cojoko.Class('Psc.EventDispatching', {}); });
+      define('test-files/Cojoko/Psc/Code', {});
+      define('test-files/Cojoko/Psc/Exception', {});
+      define('test-files/Cojoko/Psc/UI/WidgetWrapper', function () { return Cojoko.Class('Psc.UI.WidgetWrapper', {}); });
+      define('jquery-ui', {});
+
+      that.evalWritten(DropBoxClass).done(function(writtenClass, wrapper) {
         start();
 
         that.assertCojoko(writtenClass)
           .name('Psc.UI.DropBox')
-          .isSubClassOf('Psc.UI.WidgetWrapper');
+          .isSubclassOf('Psc.UI.WidgetWrapper');
 
         // see ReaderTest.js for full expl
         //define(['joose', 'jquery', 'jquery-ui', 'Psc/UI/WidgetWrapper', 'Psc/EventDispatching', 'Psc/Code'], function(Joose, $) {
         var paths = _(wrapper.paths);
 
         that.assertTrue(_(wrapper.params).contains('$'));
-        that.assertTrue(paths.contains('Psc/UI/WidgetWrapper'));
-        that.assertTrue(paths.contains('Psc/EventDispatching'));
-        that.assertTrue(paths.contains('Psc/Code'));
+        that.assertTrue(paths.contains('test-files/Cojoko/Psc/UI/WidgetWrapper'), 'Psc/UI/WidgetWrapper is a dependency');
+        that.assertTrue(paths.contains('test-files/Cojoko/Psc/EventDispatching'));
+        that.assertTrue(paths.contains('test-files/Cojoko/Psc/Code'));
         that.assertTrue(paths.contains('jquery'));
         that.assertTrue(paths.contains('jquery-ui'));
       });

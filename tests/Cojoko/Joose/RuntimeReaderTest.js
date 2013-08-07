@@ -3,9 +3,8 @@ define([
   'qunit-assert', 'test-setup', 'esprima', 'JSON', 'lodash', 'joose', 'Cojoko/Joose/RuntimeReader',
   'test-files/Joose/Psc/Response', 
   'test-files/Joose/Psc/EventDispatching', 
-  'test-files/Joose/Psc/UI/WidgetWrapper',
-  'test-files/Joose/Psc/UI/DropBox'
-  ], function(t, testSetup, esprima, JSON, _, Joose, JooseRuntimeReader) {
+  'test-files/Joose/Psc/UI/WidgetWrapper'
+  ], function (t, testSetup, esprima, JSON, _, Joose, JooseRuntimeReader) {
   
   module("Cojoko.Joose.RuntimeReader");
 
@@ -136,16 +135,22 @@ define([
 
   });
 
-  test("reads a class with a role", function () {
+  asyncTest("reads a class with a role", function () {
     var that = setup(this);
 
-    that.assertCojoko(this.reader.read(Psc.UI.DropBox))
-      .name('Psc.UI.DropBox')
-      .method('init').end()
-      .isSubclassOf('Psc.UI.WidgetWrapper')
-      .hasMixin('Psc.EventDispatching')
-    ;
+    define('jquery-ui', {});
+    define('stacktrace', {});
 
+    require(['test-files/Joose/Psc/UI/DropBox'], function() {
+      start();
+
+      that.assertCojoko(that.reader.read(Psc.UI.DropBox))
+        .name('Psc.UI.DropBox')
+        .method('init').end()
+        .isSubclassOf('Psc.UI.WidgetWrapper')
+        .hasMixin('Psc.EventDispatching')
+      ;
+    });
   });
 
   test("reads only the roles of the citizen class not the Roles of the hierarchy", function () {
@@ -179,7 +184,6 @@ define([
     ;
 
   });
-
 
   test("reads only the initialize method from the citizen class and no other methods of the whole hierarchy", function () {
     var that = setup(this);

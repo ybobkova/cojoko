@@ -9,6 +9,9 @@ define([
   'text!test-files/Joose/Test/InitObject.js',
   'text!test-files/Joose/Test/JooseClassWithNoIsProperty.js',
   'text!test-files/Joose/Psc/Date.js',
+  'text!test-files/Joose/Psc/Code.js',
+  'text!test-files/Joose/Psc/WrongValueException.js',
+  'text!test-files/Joose/Psc/Exception.js',
   'text!test-files/Joose/Psc/CMS/TabButtonable.js',
   'text!test-files/Joose/Psc/CMS/Buttonable.js',
   'text!test-files/Joose/Psc/CMS/TabOpenable.js',
@@ -189,29 +192,30 @@ define([
     var that = setup(this);
 
     that.assertCojoko(this.read('Test.Swimming'))
-      .hasDependency({ path: 'lodash', alias: '_', type: 'vendor'})
-      .hasNotDependency('Joose')
+      .hasVendorDependency({ path: 'lodash', alias: '_'})
+      .hasNotVendorDependency('Joose')
     ;
   });
 
   test("dependencies that are subclasses will be ignored but used dependencies or other class dependencies will be added", function () {
-    var that = setup(this);
+    var that = setup(this), cojokoClass;
 
     //define(['joose', 'jquery', 'Psc/UI/WidgetWrapper', 'Psc/EventDispatching', 'Psc/Code'], function(Joose, $) {
-    that.assertCojoko(this.read('Psc.UI.DropBox'))
-      .hasNotDependency('Joose')
-      .hasDependency({ path: 'jquery', alias: '$', type: 'vendor'})
+    that.assertCojoko(cojokoClass = this.read('Psc.UI.DropBox'))
+      .hasNotVendorDependency('Joose')
+
+      .hasVendorDependency({ path: 'jquery', alias: '$'})
 
       // dependency that has no param alias
-      .hasDependency({path: 'jquery-ui', type: 'vendor'})
+      .hasVendorDependency({path: 'jquery-ui'})
       
       // dependenciy that is subClass
-      .hasDependency({path: 'Psc/UI/WidgetWrapper', type: 'implicit'}) // extends
-      .hasDependency({path: 'Psc/EventDispatching', type: 'implicit'}) // mixin
+      .hasImplicitClass('Psc.UI.WidgetWrapper') // extends
+      .hasImplicitClass('Psc.EventDispatching') // mixin
 
       // real class dependency (will be hooked at define level as a global-look-alike)
-      .hasDependency({path: 'Psc/Code', alias: 'Psc.Code', type: 'explicit'})
-      .hasDependency({path: 'Psc/Exception', alias: 'Psc.Exception', type: 'explicit'})
+      .hasExplicitClass('Psc.Code')
+      .hasExplicitClass('Psc.Exception')
     ;
 
     /* will be converted (with cojoko to something like):

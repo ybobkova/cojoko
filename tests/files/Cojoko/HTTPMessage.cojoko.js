@@ -1,4 +1,4 @@
-define(['Cojoko'], function (Cojoko) {
+define(['Cojoko'], function(Cojoko) {
   return Cojoko.Class('Psc.HTTPMessage', {
     properties: {
       header: { is: 'gs', required: false, init: {} }

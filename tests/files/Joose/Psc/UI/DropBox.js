@@ -1,5 +1,5 @@
 /*globals alert:true*/
-define(['joose', 'jquery', 'jquery-ui', 'Psc/UI/WidgetWrapper', 'Psc/EventDispatching', 'Psc/Code', 'Psc/Exception'], function(Joose, $) {
+define(['joose', 'jquery', 'jquery-ui', 'test-files/Joose/Psc/UI/WidgetWrapper', 'test-files/Joose/Psc/EventDispatching', 'Psc/Code', 'Psc/Exception'], function(Joose, $) {
   
   /**
    * Das niemals endende Thema: draggables, droppables and sortables:
