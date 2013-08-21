@@ -9,7 +9,8 @@ define([
     'text!test-files/Joose/Psc/EventDispatching.js',
     'text!test-files/Joose/Psc/Code.js',
     'text!test-files/Joose/Psc/WrongValueException.js',
-    'text!test-files/Joose/Psc/Exception.js'
+    'text!test-files/Joose/Psc/Exception.js',
+    'text!test-files/Joose/Test/NamespacedDependenciesClass.js'
   ],
   function(
     require, t, testSetup, $, _, Cojoko, HTTPMessageCojokoCode, getWrapper, escodegen,
@@ -45,6 +46,7 @@ define([
         test.assertEquals(moduleName, wrapper.moduleName, 'moduleName should be injected correctly for test');
 
         eval(js);
+        console.log(js);
 
         var d = $.Deferred();
 
@@ -181,6 +183,39 @@ define([
         that.assertTrue(paths.contains('test-files/Cojoko/Psc/Code'));
         that.assertTrue(paths.contains('jquery'));
         that.assertTrue(paths.contains('jquery-ui'));
+      });
+    });
+
+    asyncTest("writes old Depdencies with namespaces as a Construct in the define wrapper", function () {
+      var that = setup(this);
+
+      var OurClass = this.jooseReader.read('Test.NamespacedDependenciesClass', that.classCodeReader);
+      var PscCode = Cojoko.Class('Psc.Code', {}), PscUIDropBox = Cojoko.Class('Psc.UI.DropBox', {});
+
+      define('test-files/Cojoko/Psc/Code', function () { return  PscCode; });
+      define('test-files/Cojoko/Psc/UI/DropBox', function () { return  PscUIDropBox; });
+      define('jquery-ui', {});
+      
+      /*
+      var Psc = {
+        UI: {
+           DropBox: require('Psc/UI/DropBox')
+        },
+        Code: require('Psc/Code')
+      };
+      */
+
+      that.evalWritten(OurClass).done(function(writtenClass, wrapper) {
+        start();
+
+        that.assertCojoko(writtenClass)
+          .name('Test.NamespacedDependenciesClass');
+
+        var WrittenClass = Cojoko.runtimeCompile(writtenClass);
+        var inst = new WrittenClass();
+
+        that.assertSame(PscCode, inst.getCodeDependency());
+        that.assertSame(PscUIDropBox, inst.getDropBoxDependency());
       });
     });
 });
