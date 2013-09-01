@@ -1,11 +1,11 @@
 # Cojoko [![Build Status](https://travis-ci.org/pscheit/cojoko.png?branch=master)](https://travis-ci.org/pscheit/cojoko)
 
-It's an compiled advanced meta object system (inspired by Joose) for javascript which supports the generation of view models for [Knockout](http://knockoutjs.com).
+It's a compiled advanced meta object system (inspired by Joose) for javascript which supports the generation of view models for [Knockout](http://knockoutjs.com).
 
 ## Introduction
 
-Cojoko is heavily inspired by Joose. But it is compiled to VanillaScript, kept up to date and is delivered as AMD.  
-I really liked the idea of Joose: It lets you create OOP classes for real javascript oo-models without knowing anyything about prototypes and inheritance in javascript. That might scare you first, but it leads to very declarative code:
+Cojoko is heavily inspired by Joose. But it is compiled to VanillaScript, kept up-to-date and is delivered as AMD.  
+I really liked the idea of Joose: It lets you create OOP classes for real javascript oo-models without knowing anything about prototypes and inheritance in javascript. That might scare you first, but it leads to very declarative code:
 
 ```javascript
 define('cojoko', function (Cojoko) {
@@ -54,17 +54,17 @@ define('cojoko', './Person', './Identifyable', function (Cojoko, Person, Identif
 
 ## Why Cojoko
 
-Okay the way of writing code like this is great. But Knockout is greater, isn't it? Writing models for Knockout is a little bit verbose. When you already have some model it's just a lot of straight forward coding. When you have an Backend-API which has the same model as in you're javascript application, you'll have to write 3 models to get your application up and running: 
+Okay, the way of writing code like this is great. But Knockout is greater, isn't it? Writing models for Knockout is a little bit verbose. When you already have some model it's just a lot of straight forward coding. When you have a Backend-API which has the same model as in your javascript application, you'll have to write 3 models to get your application up and running: 
 
   * At least one backend-model, 
   * one model written in Joose
   * one view written in Knockout compatible style. 
 
-Thats a lot typing for one model with mostly the same properties in every class.  
-Thats where Cojoko bridges the gap. Cojoko allows you to 
+That's a lot of typing for one model with mostly the same properties in every class.  
+That's where Cojoko bridges the gap. Cojoko allows you to 
 
   * compile the model description, which can be easily created with any backend (because you're able to export it as JSON). 
-  * have a vanilla javascript model which is fast and easy to understand (no blackbox OOP avaible)
+  * have a vanilla javascript model which is fast and easy to understand (no blackbox OOP available)
   * derive a Knockout view from it and use it directly in your MVVC architecture
 
 ## Dependencies
