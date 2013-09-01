@@ -83,8 +83,8 @@ that.assertEquals(',', googPrice.getThousandsSeparator());
 that.assertEquals('.', googPrice.getDecimalsSeparator());
 
 // no setters
-that.assertUndefined(googPrice.setValue;
-that.assertUndefined(googPrice.setCurrency;
+that.assertUndefined(googPrice.setValue);
+that.assertUndefined(googPrice.setCurrency);
 
 googPrice.setDecimals(4);
 that.assertEquals(4, googPrice.getDecimals());
