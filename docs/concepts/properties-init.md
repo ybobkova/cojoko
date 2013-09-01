@@ -1,8 +1,8 @@
 # Init values of properties
 
-A property in Cojoko can have an init value. It is given as the "init" key of the property specification. If init is left out `undefined` is used as default.
+A property in Cojoko can have an init value. It is given as the "init" key of the property specification. If "init" is left out, `undefined` is used as default.
 
-Lets have a look at properties definition in cojoko with init for properties:
+Let's have a look at properties definition in cojoko with "init" for properties:
 
 ```javascript
     properties: {
@@ -15,8 +15,8 @@ Lets have a look at properties definition in cojoko with init for properties:
     }
 ```
 
-Notice: Using `{}` or arrays like `[1, 2]` in the init key have a special meaning: Cojoko clones these object types and assigns it to the object on initialisation.
-If Cojoko would not clone these structures they would be common for all instances of the Cojoko class, which is not directly what you would expect:
+Notice: Using `{}` or arrays like `[1, 2]` in the "init" key has a special meaning: Cojoko clones these object types and assigns it to the object on initialization.
+If Cojoko would not clone these structures, they would be common for all instances of the Cojoko class, which is not directly what you would expect:
 
 (init-object-properties.example)
 ```javascript
@@ -43,11 +43,11 @@ If Cojoko would not clone these structures they would be common for all instance
   anna.addNamePart("Anna");
   // anna.getNames() == ["Anna"]
 ```
-You would always expect that annas names are `["Anna"]` but if Cojoko would not clone the array given in `init` the names property for anna would be: `["Bob", "Kelzow", "Anna"]`. The prototype chain would inherit the property and so both instances would point to the array from init and therefore  push would modify the array in both instances. Because this is not what you expected in most progarmming languages Cojoko does the cloning for you.
+You would always expect that anna's names are `["Anna"]`, but if Cojoko would not clone the array given in `init`, the names property for anna would be: `["Bob", "Kelzow", "Anna"]`. The prototype chain would inherit the property and so both instances would point to the array from init and therefore push would modify the array in both instances. Because this is not what you expected in most programming languages, Cojoko does the cloning for you.
 
 ## the init() function 
 
-every CojokoClass can have one init() function for initializing the state of the object. The function is called with the parameters given to the constructor as an object hash. The parameters are the unfiltered and unaltered. The init values given to a property are  applied to the class member variables before.
+Every CojokoClass can have one init() function for initializing the state of the object. The function is called with the parameters given to the constructor as an object hash. The parameters are the unfiltered and unaltered. The init values given to a property are applied to the class member variables before.
 
 ```javascript
   var Person = Cojoko.Class({
