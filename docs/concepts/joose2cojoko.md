@@ -1,6 +1,6 @@
 # converting joose 2 cojoko
 
-a raw Joose class (loaded with AMD) looks like this
+A raw Joose class (loaded with AMD) looks like this:
 
 ```javascript
 define(['joose', 'Psc/HTTPMessage'], function (Joose) {
