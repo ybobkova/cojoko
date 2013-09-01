@@ -38,8 +38,8 @@ Cojoko.Class('ACME.Exchange.Share', {
 ```
 
  * Defines a class `Share` in the Namespace `ACME.Exchange`
- * the class has 4 properties title, isin, wkn, currency
- * the class has one simple method that transform the class to a string
+ * the class has 4 properties title, isin, wkn, price
+ * the class has one simple method that transforms the class to a string
 
 ```javascript
 Cojoko.Class('ACME.Exchange.Price', {
@@ -49,7 +49,7 @@ Cojoko.Class('ACME.Exchange.Price', {
     currency: { is : 'g', required: true, isPrivate: true },
 
     decimals: { is : 'gs', required: false, isPrivate: true, init: 2 },
-    thousandSeparator: { is : 'g', required: false, isPrivate: true },
+    thousandsSeparator: { is : 'g', required: false, isPrivate: true },
     decimalsSeparator: { is : 'g', required: false, isPrivate: true }
   },
 
