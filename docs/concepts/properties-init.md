@@ -47,7 +47,7 @@ You would always expect that anna's names are `["Anna"]`, but if Cojoko would no
 
 ## the init() function 
 
-Every CojokoClass can have one init() function for initializing the state of the object. The function is called with the parameters given to the constructor as an object hash. The parameters are the unfiltered and unaltered. The init values given to a property are applied to the class member variables before.
+Every CojokoClass can have one init() function for initializing the state of the object. The function is called with the parameters given to the constructor as an object hash. The parameters are the unfiltered and unaltered parameters given to the constructor of the instance. The init values given to a property are applied to the class member variables before:
 
 ```javascript
   var Person = Cojoko.Class({
