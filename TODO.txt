@@ -1,0 +1,3 @@
+handles in attributes!
+
+wann wird der setter aufgerufen: wie sieht das in init() funktionen mit before + after aus?

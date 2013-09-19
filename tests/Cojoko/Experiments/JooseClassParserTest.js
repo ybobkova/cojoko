@@ -1,4 +1,4 @@
-define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'text!test-files/Joose/Response.js'], function(t, testSetup, esprima, JSON, jooseResponse) {
+define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'text!test-files/Joose/Response.js', 'test-files/Joose/Response'], function(t, testSetup, esprima, JSON, jooseResponse) {
   
   module("Cojoko.Experiments.JooseClassParser");
 
@@ -12,6 +12,7 @@ define(['qunit-assert', 'test-setup', 'esprima', 'JSON', 'text!test-files/Joose/
     var that = setup(this);
 
     var syntax = esprima.parse(jooseResponse);
-    console.log(JSON.stringify(syntax, undefined, 2));
+    
+    this.assertNotUndefined(JSON.stringify(syntax, undefined, 2));
   });
 });

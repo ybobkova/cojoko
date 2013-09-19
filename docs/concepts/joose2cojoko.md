@@ -1,6 +1,6 @@
 # converting joose 2 cojoko
 
-a raw Joose class (loaded with AMD) looks like this
+A raw Joose class (loaded with AMD) looks like this:
 
 ```javascript
 define(['joose', 'Psc/HTTPMessage'], function (Joose) {
@@ -50,7 +50,7 @@ We plan to do the following tasks:
     * convert this.SUPER calls? (low prio)
   * extract `after: { initialize: function () }` and convert it to `init: function` in cojoko
   * fix possible constructors (low prio, refactor Joose, first)
-  * compile the joose file into Cojoko
+  * compile the Joose file into Cojoko
     * copy and modify the properties
       * change `is: 'rw'` into `is: 'gs'`
     * copy inheritance and traits

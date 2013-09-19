@@ -1,0 +1,40 @@
+{
+  "author": "Ben Newman <bn@cs.stanford.edu>",
+  "name": "ast-types",
+  "description": "Esprima-compatible implementation of the Mozilla JS Parser API",
+  "keywords": [
+    "ast",
+    "abstract syntax tree",
+    "hierarchy",
+    "mozilla",
+    "spidermonkey",
+    "parser api",
+    "esprima",
+    "types",
+    "type system",
+    "type checking",
+    "dynamic types",
+    "parsing",
+    "transformation",
+    "syntax"
+  ],
+  "version": "0.2.16",
+  "homepage": "http://github.com/benjamn/ast-types",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benjamn/ast-types.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "whiskey test/run.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {
+    "esprima": ">= 1.0.3",
+    "whiskey": "0.6.x"
+  },
+  "engines": {
+    "node": ">= 0.6"
+  }
+}

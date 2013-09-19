@@ -1,0 +1,34 @@
+define(['Cojoko'], function(Cojoko) {
+  return Cojoko.Class('Psc.HTTPMessage', {
+    properties: {
+      header: { is: 'gs', required: false, init: {} }
+    },
+
+    methods: {
+      setHeaderField: function (key, value) {
+        this.getHeader()[ key ] = value;
+        return this;
+      },
+
+      getHeaderField: function (key) {
+        return this.getHeader()[key] || null;
+      },
+
+      removeHeaderField: function (key) {
+        delete this.getHeader()[key];
+      },
+
+      parseHeader: function (headers) {
+        // copy von jquery
+        var m, rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm; // IE leaves an \r character at EOL
+        this.setHeader({});
+  
+        while (m = rheaders.exec(headers)) {
+          this.setHeaderField(m[1], m[2]);
+        }
+
+        return this;
+      }
+    }
+  });
+});

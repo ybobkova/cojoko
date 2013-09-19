@@ -49,9 +49,7 @@ module.exports = function(grunt) {
           $: true,
           define: true, require: true,
 
-          Psc: true,
-          tiptoi: true,
-          CoMun: true,
+          Test: true, Psc: true,
           QUnit: true, module: true, stop: true, start: true, ok: true, asyncTest: true, test: true, expect: true
         }
       }
@@ -60,7 +58,12 @@ module.exports = function(grunt) {
     qunit: {
       all: {
         options: {
-           urls: mapToUrl('tests/**/*Test.html')
+           urls: mapToUrl(['tests/**/*Test.html', '!tests/Cojoko/Experiments/**', '!tests/Cojoko/cookbook/**'])
+        }
+      },
+      single: {
+        options: {
+          urls: '<%= qunit.single.urls %>'
         }
       },
       options: {
@@ -132,8 +135,26 @@ module.exports = function(grunt) {
 
   grunt.task.registerTask('pack', ['jshint', 'requirejs']);
   grunt.task.registerTask('default', ['jshint', 'connect:server', 'qunit:all']);
-  grunt.task.registerTask('test', ['connect:server', 'qunit:all']);
   grunt.task.registerTask('server', ['connect:listenserver']);
   grunt.task.registerTask('travis', ['jshint', 'connect:server', 'qunit:all']);
-  
+
+  grunt.task.registerTask('test', 'runs testfiles per minimatch finder', function (tests) {
+    if (tests) {
+      var pattern;
+      tests = tests.replace(/\./g, '/');
+
+      if (tests.match(/^\//)) {
+        pattern = 'tests/'+tests+'*Test.html';
+      } else {
+        pattern = 'tests/**/'+tests+'*Test.html';
+      }
+
+      grunt.log.writeln('pattern: '+pattern);
+      grunt.config.set('qunit.single.urls', mapToUrl(pattern));
+      
+      grunt.task.run('connect:server', 'qunit:single');
+    } else {
+      grunt.task.run('connect:server', 'qunit:all');
+    }
+  });
 };

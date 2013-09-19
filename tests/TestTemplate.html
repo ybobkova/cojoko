@@ -5,18 +5,17 @@
   <title><%- testTitle %></title>
   <link rel="stylesheet" href="/vendor/qunit/qunit-1.11.0.css">
   <link rel="stylesheet" href="/vendor/qunit-assert/css/tests.css" type="text/css" />
+  <script src="/vendor/requirejs/require.js"></script>
+  <script src="/lib/config.js"></script>
 </head>
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture">test markup, will be hidden</div>
   <div id="visible-fixture">visible test markup</div>
   
-  <script src="/vendor/require.js"></script>
   <script>
-    require(["/lib/boot.js"], function () {
-      require(["TestRunner"], function (runner) {
-        runner.run(['tests/<%= testName %>']);
-      });
+    require(["TestRunner"], function (runner) {
+      runner.run(['tests/<%= testName %>']);
     });
   </script>
 </body>

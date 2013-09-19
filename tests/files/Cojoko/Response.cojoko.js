@@ -1,11 +1,12 @@
-define(['joose', 'Psc/HTTPMessage'], function (Joose) {
-  Joose.Class('Psc.Response', {
+define(['cojoko', './HTTPMessage'], function (Cojoko) {
+  Cojoko.Class('Psc.Response', {
     isa: Psc.HTTPMessage,
   
     has: {
       code: { is : 'rw', required: true },
       reason: { is : 'rw', required: false, init: null },
       body: { is : 'rw', required: false, init: null }
+
       // headers die headers als string (werden dann geparsed)
     },
     

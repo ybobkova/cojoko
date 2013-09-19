@@ -1,6 +1,6 @@
 [submodule "vendor/qunit-assert"]
 	path = vendor/qunit-assert
-	url = https://github.com/pscheit/qunit-assert
+	url = git://github.com/pscheit/qunit-assert.git
 [submodule "vendor/esprima"]
 	path = vendor/esprima
-	url = git@github.com:ariya/esprima.git
+	url = git://github.com/ariya/esprima.git
