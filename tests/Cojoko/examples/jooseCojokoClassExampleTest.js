@@ -9,6 +9,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
 
     var that = setup(this);
 
+    /* beginning of the example */
     define(['cojoko', 'Psc/HTTPMessage'], function (Cojoko, HTTPMessage) {
       Cojoko.Class('Psc.Response', {
 
@@ -39,6 +40,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
         }
       });
     });
+    /* end of the example */
 
     that.assertNotUndefined(Psc.Response, 'the class is defined');
     that.isTrue(Psc.Response.code.required, 'the attributes are created');

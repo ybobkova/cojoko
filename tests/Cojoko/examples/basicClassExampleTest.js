@@ -8,6 +8,8 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
   test("the class is created correctly", function() {
 
     var that = setup(this);
+
+    /* beginning of the example */  
     Cojoko.Class('ACME.Exchange.Share', {
 
       properties: {
@@ -23,6 +25,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
         }
       }
     });
+    /* end of the example */
   
     that.assertNotUndefined(ACME.Exchange.Share, 'the class is not undefined');
   });

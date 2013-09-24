@@ -4,6 +4,8 @@ A property in Cojoko can have an init value. It is given as the "init" key of th
 
 Let's have a look at properties definition in cojoko with "init" for properties:
 
+***BasicClassExample***
+
 ```javascript
     properties: {
       num: { is : 'gs', required: true, init: 200, type: "Integer" },

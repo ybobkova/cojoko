@@ -9,6 +9,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
 
     var that = setup(this);
 
+    /* beginning of the example */
     var Price = Cojoko.Class('ACME.Exchange.Price', {
 
       properties: {
@@ -33,6 +34,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
         }
       }
     });
+    /* end of the example */
   
     that.assertNotUndefined(ACME.Exchange.Price, 'the class is not undefined');
 

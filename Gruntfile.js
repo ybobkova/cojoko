@@ -71,10 +71,16 @@ module.exports = function(grunt) {
         inject: false
       }
     },
+    'update-examples': {
+      options: {
+        src: "docs/**/*.md"
+      }
+    },
     'update-tests': {
       options: {
+        src: ['tests/**/*Test.js']
       },
-      src: ['tests/**/*Test.js']
+      
     },
     concat: {
       options: {
