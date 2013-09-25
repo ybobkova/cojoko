@@ -19,6 +19,8 @@ define(['Cojoko'], function (Cojoko) {
 ### basic class
 
 ```javascript
+// basicClassExample: Classes can be created
+
 Cojoko.Class('ACME.Exchange.Share', {
 
   properties: {
