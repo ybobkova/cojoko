@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         inject: false
       }
     },
-    'update-examples': {
+    'push-examples': {
       options: {
         src: "docs/**/*.md"
       }
@@ -79,8 +79,7 @@ module.exports = function(grunt) {
     'update-tests': {
       options: {
         src: ['tests/**/*Test.js']
-      },
-      
+      }
     },
     concat: {
       options: {
