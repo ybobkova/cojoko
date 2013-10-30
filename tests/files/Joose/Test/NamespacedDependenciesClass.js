@@ -7,8 +7,8 @@ define(['joose', 'jquery-ui', 'Psc/Code', 'Psc/UI/DropBox'], function(Joose, $) 
         return Psc.Code;
       },
 
-      getExceptionDependency: function () {
-        return Psc.Exception;
+      getDropBoxDependency: function () {
+        return Psc.UI.DropBox;
       }
     }
 

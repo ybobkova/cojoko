@@ -68,4 +68,27 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     this.assertEquals('overidden', o.getValue(), 'value getter is overidden');
   });
 
+  test("a cojoko method gets variables inherited from class scope", function() {
+    var Psc = {
+      'Code': { name: 'Psc.Code' },
+      'UI': { 'DropBox': { name: 'Psc.UI.DropBox' } }
+    };
+    var fn;
+
+    var ScopeClass = Cojoko.Class('ScopeClass', {
+      methods: {
+        getCodeDependency: fn = function () {
+          return Psc.Code;
+        },
+
+      getDropBoxDependency: function () {
+        return Psc.UI.DropBox;
+      }
+    }});
+
+    var CompiledScopeClass = Cojoko.runtimeCompile(ScopeClass);
+    var scopeObject = new CompiledScopeClass();
+
+    this.assertSame(Psc.Code, scopeObject.getCodeDependency());
+  });
 });
