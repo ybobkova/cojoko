@@ -10,6 +10,7 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     var that = setup(this);
 
     /* beginning of the example */
+    //Piupiupiu!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     var Person = Cojoko.Class({
       properties: {
         names: { is: 'gw', required: false, init: [], type: "Array" }

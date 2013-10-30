@@ -46,7 +46,6 @@ define([
         test.assertEquals(moduleName, wrapper.moduleName, 'moduleName should be injected correctly for test');
 
         eval(js);
-        console.log(js);
 
         var d = $.Deferred();
 

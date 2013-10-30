@@ -36,9 +36,9 @@ define(['qunit-assert', 'test-setup', 'Cojoko'], function(t, testSetup, Cojoko) 
     });
     /* end of the example */
   
-    that.assertNotUndefined(ACME.Exchange.Price, 'the class is not undefined');
+    that.assertNotUndefined(Price, 'the class is not undefined');
 
-    var googPrice = new ACME.Exchange.Price({ value: 910.70, currency: 'USD' });
+    var googPrice = new Price({ value: 910.70, currency: 'USD' });
 
     that.assertEquals(910.70, googPrice.getValue());
     that.assertEquals('USD', googPrice.getCurrency());

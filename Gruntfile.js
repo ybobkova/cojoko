@@ -72,8 +72,16 @@ module.exports = function(grunt) {
       }
     },
     'push-examples': {
-      options: {
-        src: "docs/**/*.md"
+      def: {
+        src: ['docs/**/*.md'],
+        tests: ['tests/Cojoko/examples/']      
+      }
+    },
+    'pull-examples': {
+      def: {
+        src: ['docs/in-and-out.md'],
+        tests: ['tests/Cojoko/examples/'],
+        templates: ['lib/tasks/files/'] 
       }
     },
     'update-tests': {

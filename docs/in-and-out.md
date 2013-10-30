@@ -18,25 +18,25 @@ define(['Cojoko'], function (Cojoko) {
 
 ### basic class
 
-```javascript
+```js
 // basicClassExample: Classes can be created
+  
+    Cojoko.Class('ACME.Exchange.Share', {
 
-Cojoko.Class('ACME.Exchange.Share', {
+      properties: {
+        title: { is: 'rw', required: true, isPrivate: true },
+        isin: { is: 'rw', required: true, isPrivate: true },
+        wkn: { is: 'rw', required: true, isPrivate: true },
+        price: { is: 'rw', required: true, isPrivate: true, type: 'ACME.Exchange.Price' }
+      },
 
-  properties: {
-    title: { is : 'rw', required: true, isPrivate: true },
-    isin: { is : 'rw', required: true, isPrivate: true },
-    wkn: { is : 'rw', required: true, isPrivate: true },
-    price: { is : 'rw', required: true, isPrivate: true, type: ACME.Exchange.Price }
-  },
-
-  methods: {
-    toString: function () {
-      return this.title+' ('+this.isin+'/'+this.wkn+')';
-    }
-  }
-
-});
+      methods: {
+        toString: function () {
+          return this.title+' ('+this.isin+'/'+this.wkn+')';
+        }
+      }
+    });
+    
 ```
 
  * Defines a class `Share` in the Namespace `ACME.Exchange`
@@ -74,7 +74,7 @@ Cojoko.Class('ACME.Exchange.Price', {
 the following applies:
 
 ```javascript
-var googPrice = new ACME.Exchange.Price({ value: 910.70, currency: 'USD' });
+var googPrice = new Price({ value: 910.70, currency: 'USD' });
 
 that.assertEquals(910.70, googPrice.getValue());
 that.assertEquals('USD', googPrice.getCurrency());

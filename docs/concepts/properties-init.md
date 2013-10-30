@@ -4,7 +4,6 @@ A property in Cojoko can have an init value. It is given as the "init" key of th
 
 Let's have a look at properties definition in cojoko with "init" for properties:
 
-***BasicClassExample***
 
 ```javascript
     properties: {
@@ -52,6 +51,7 @@ You would always expect that anna's names are `["Anna"]`, but if Cojoko would no
 Every CojokoClass can have one init() function for initializing the state of the object. The function is called with the parameters given to the constructor as an object hash. The parameters are the unfiltered and unaltered parameters given to the constructor of the instance. The init values given to a property are applied to the class member variables before:
 
 ```javascript
+//PropertiesExample: Properties can be used
   var Person = Cojoko.Class({
     properties: {
       name: { is: 'gw', required: false, init: 'P', type: "String" },
