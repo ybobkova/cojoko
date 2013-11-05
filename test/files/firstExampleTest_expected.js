@@ -1,3 +1,6 @@
+/*jshint node: true */
+/*global describe, it, before, beforeEach, after, afterEach */
+"use strict";
 var chai = require("chai");
 var mocha = require("mocha");
 var requirejs = require("requirejs");

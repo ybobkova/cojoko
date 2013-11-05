@@ -1,4 +1,3 @@
 {
-  "expr": true,
-  "globals": {"describe": true, "it": true, "beforeEach": true, "before": true}
+  "expr": true
 }

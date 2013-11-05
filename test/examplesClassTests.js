@@ -1,3 +1,7 @@
+/*jshint node: true */
+/*global describe, it, before, beforeEach, after, afterEach */
+"use strict";
+
 var fs = require('fs');
 var chai = require('chai'),
   expect = chai.expect,
@@ -23,7 +27,7 @@ describe('push()', function() {
 
 describe('pull()', function() {
 
-  var options = {tests: 'test/files/', templates: 'test/files/'};
+  var options = {tests: 'test/files/', testTemplates: 'test/files/'};
   var examples = new ExamplesClass(options);
   var first_before = fs.readFileSync('test/files/firstExampleTest.js').toString();
 
@@ -74,13 +78,13 @@ describe('pasteExampleToTest()', function() {
 
 describe('readOrCreateTestFile()', function() {
 
-  var options = {src: 'test/files/docu_read_or_create.txt', templates: 'test/files/'};
+  var options = {src: 'test/files/docu_read_or_create.txt', testTemplates: 'test/files/'};
   var examples = new ExamplesClass(options);
   var parseTestJsPath = 'test/files/parseExampleTest';
   var parseTestFile = fs.readFileSync(parseTestJsPath + '.js').toString();
 
   it("should return the text of the existing file", function() {
-    readTest = examples.readOrCreateTestFile(parseTestJsPath, options.templates);
+    var readTest = examples.readOrCreateTestFile(parseTestJsPath, options.testTemplates);
 
     assert(fs.existsSync(parseTestJsPath + '.js'), 'the existing file was not found');
     assert.equal(readTest, parseTestFile, 'the existing file was not read correctly');
@@ -94,8 +98,8 @@ describe('readOrCreateTestFile()', function() {
 
   it("should create files and return the text of the created js-file", function() {
 
-    createdTest = examples.readOrCreateTestFile('test/files/nonExistingTest', options.templates);
-    templateJsFile = fs.readFileSync('test/files/docuTestTemplate.js');
+    var createdTest = examples.readOrCreateTestFile('test/files/nonExistingTest', options.testTemplates);
+    var templateJsFile = fs.readFileSync('test/files/docuTestTemplate.js');
     assert(fs.existsSync('test/files/nonExistingTest.js'), 'the js-file was not found');
     assert.equal(createdTest, templateJsFile, 'the created js-file was incorrectly written');
 
@@ -103,17 +107,17 @@ describe('readOrCreateTestFile()', function() {
 });
 
 describe('pasteNameAndDescriptionToCreatedFiles()', function() {
-  var options = {templates: 'test/files/'};
+  var options = {testTemplates: 'test/files/'};
   var examples = new ExamplesClass(options);
 
-  templatePath = options.templates + 'docuTestTemplate.js';
-  jsComment = "```js\n// pasteNameExample: The name and description must be pasted\n```";
+  var templatePath = options.testTemplates + 'docuTestTemplate.js';
+  var jsComment = "```js\n// pasteNameExample: The name and description must be pasted\n```";
   var templateText = fs.readFileSync(templatePath).toString().trim();
 
   it("should write name and description of the example to the created js-file", function() {
     var actual = examples.pasteNameAndDescriptionToCreatedFiles(templateText, jsComment);
     var expected = fs.readFileSync('test/files/pasteNameTest_expected.js').toString();    
-    fs.writeFileSync(options.templates + 'docuTestTemplate.js', templateText);
+    fs.writeFileSync(options.testTemplates + 'docuTestTemplate.js', templateText);
     assert.equal(actual, expected, 'the js-file was incorrectly written');
   });
 });

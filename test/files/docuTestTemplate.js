@@ -1,3 +1,7 @@
+/*jshint node: true */
+/*global describe, it, before, beforeEach, after, afterEach */
+"use strict";
+
 var chai = require('chai');
 var mocha = require('mocha');
 var requirejs = require('requirejs');
@@ -10,10 +14,10 @@ var cojokoConfig = _.merge(require(lib + '\\config.js'), { baseUrl: lib });
 
 var cojokoLoader = requirejs.config(cojokoConfig);
 
-describe(<exampleName>, function () {
+describe("<exampleName>", function () {
   this.timeout(500);
 
-  it(<exampleDescription>, function (done) {
+  it("<exampleDescription>", function (done) {
 
     setTimeout(done, 300);
     cojokoLoader(['Cojoko'], function (Cojoko) {
